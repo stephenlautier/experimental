@@ -1,0 +1,24 @@
+{
+  "name": "angular-tooltipster",
+  "version": "0.0.1",
+  "description": "angular tooltipster component and service",
+  "main": "dist/angular-tooltipster.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "postinstall": ""
+  },
+  "keywords": [
+    "angularjs",
+    "tooltipster",
+    "ui-component"
+  ],
+  "author": "Stephen Lautier <stephen.lautier@outlook.com> (https://blog.stephen-lautier.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephenlautier/experimental/tree/master/angular-tooltipster"
+  }
+}
