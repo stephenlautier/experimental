@@ -2,8 +2,11 @@
 	"compilerOptions": {
 		"module": "amd",
 		"noImplicitAny": true,
+		"noEmit": true,
+		"noLib": false,
 		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true
+		"experimentalDecorators": true,
+		"declaration": false
 	},
 	"exclude": [
 		"node_modules",
