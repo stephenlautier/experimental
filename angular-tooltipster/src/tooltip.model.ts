@@ -62,7 +62,7 @@ export interface ITooltipCommonOptions {
 		 * @param content
 		 * @returns
 		 */
-	onInit?: (origin, content) => void;
+	onInit?: (origin: JQuery, content: string) => void;
 
 	/**
 		 * Create a custom function to be fired before the tooltip opens. This function may prevent or hold off the opening.
@@ -70,7 +70,7 @@ export interface ITooltipCommonOptions {
 		 * @param continueTooltip
 		 * @returns
 		 */
-	onBeforeOpen?: (origin, continueTooltip) => void;
+	onBeforeOpen?: (origin: JQuery, continueTooltip: () => void) => void;
 
 	/**
 		 * Create a custom function to be fired when the tooltip and its contents have been added to the DOM
@@ -78,14 +78,14 @@ export interface ITooltipCommonOptions {
 		 * @param tooltip
 		 * @returns
 		 */
-	onReady?: (origin, tooltip) => void;
+	onReady?: (origin: JQuery, tooltip: JQuery) => void;
 
 	/**
 		 * Create a custom function to be fired once the tooltip has been closed and removed from the DOM
 		 * @param origin
 		 * @returns
 		 */
-	onClosed?: (origin) => void;
+	onClosed?: (origin: JQuery) => void;
 
 	/****** Custom Params ******/
 

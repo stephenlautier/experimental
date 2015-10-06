@@ -19,7 +19,7 @@ export interface ILog {
 
 export interface ILoggerService {
 
-	log(logType: LogType, message: string, data?: any);
+	log(logType: LogType, message: string, data?: any): void;
 
 }
 
@@ -31,7 +31,7 @@ export class LoggerService implements ILoggerService {
 
 	}
 
-	log(logType: LogType, message: string, data?: any) {
+	log(logType: LogType, message: string, data?: any): void {
 		switch (logType) {
 
 			case LogType.Debug:
@@ -100,9 +100,9 @@ export interface ILoggerFactoryProvider extends ng.IServiceProvider {
 //TODO: use annotations.
 angular.module("slabs-core")
 	.service(LoggerService.id, LoggerService)
-	.factory("loggerFactory", (loggerService) => {
+	.factory("loggerFactory", (loggerService: ILoggerService) => {
 
-		return (sourceId): ILog => {
+		return (sourceId: string): ILog => {
 			return new Logger(sourceId, loggerService);
 		};
 

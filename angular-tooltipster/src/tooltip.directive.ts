@@ -32,7 +32,6 @@
 
 		constructor(
 			loggerFactory: LoggerFactory,
-			private commonConfig: ICommonConfig,
 			private tooltipService: ITooltipService
 			) {
 
@@ -82,8 +81,8 @@
 
 		static factory(): ng.IDirectiveFactory {
 			/*@ngInject*/
-			var directive = (loggerFactory: Core.ILoggerFactory,
-				commonConfig: ICommonConfig,
+			var directive = (
+				loggerFactory: ILoggerFactory,
 				commonService: CommonService,
 				tooltipService: TooltipService
 				) => {
