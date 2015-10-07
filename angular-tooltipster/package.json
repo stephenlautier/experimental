@@ -5,7 +5,9 @@
   "main": "dist/angular-tooltipster.js",
   "directories": {
     "doc": "doc",
-    "test": "test"
+    "test": "test",
+    "baseURL": "example",
+    "packages": "example\\jspm_packages"
   },
   "scripts": {
     "postinstall": ""
@@ -20,5 +22,26 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/stephenlautier/experimental/tree/master/angular-tooltipster"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "example",
+      "doc": "doc",
+      "test": "test"
+    }
+  },
+  "devDependencies": {
+    "browser-sync": "^2.9.10",
+    "del": "^2.0.2",
+    "dts-generator": "^1.5.0",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.9.2",
+    "gulp-util": "^3.0.6",
+    "merge2": "^0.3.6",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.4",
+    "typescript": "^1.6.2",
+    "typescript-require": "^0.2.9"
   }
 }
