@@ -1,16 +1,25 @@
+import {ITooltipDefaultOptions} from "./tooltip.model";
+import {consts} from "./tooltip.const"
+
+export interface ITooltipProvider {
+	defaults: ITooltipDefaultOptions;
+	setDefaults(newDefaults: ITooltipDefaultOptions): void;
+}
+
 export class TooltipProvider implements ng.IServiceProvider {
 	static id = "tooltip";
+	
 	$get(): ITooltipProvider {
 		this.setTooltipsteDefaults(this.defaults);
-		return {
+		return <ITooltipProvider>{
 			setDefaults: this.setDefaults,
 			defaults: this.defaults
 		}
 	}
 
 	/**
-		 * Get default options.
-		 */
+	* Get default options.
+	*/
 	defaults = <ITooltipDefaultOptions>{
 		theme: "default-theme",
 		useTranslate: true,
@@ -24,19 +33,19 @@ export class TooltipProvider implements ng.IServiceProvider {
 	}
 
 	/**
-		 * Set default options.
-		 * @param {ITooltipDefaultOptions} newDefaults
-		 * @returns
-		 */
-	setDefaults(newDefaults: ITooltipDefaultOptions) {
+	* Set default options.
+	* @param {ITooltipDefaultOptions} newDefaults
+	* @returns
+	*/
+	setDefaults(newDefaults: ITooltipDefaultOptions): void {
 		angular.extend(this.defaults, newDefaults);
 		this.setTooltipsteDefaults(this.defaults);
 	}
 
-	private setTooltipsteDefaults(newDefaults: TooltipsterOptions) {
+	private setTooltipsteDefaults(newDefaults: JQueryTooltipster.ITooltipsterOptions) {
 		$.fn.tooltipster("setDefaults", newDefaults);
 	}
 }
 
-angular.module(Consts.Module)
+angular.module(consts.moduleName)
 	.provider(TooltipProvider.id, TooltipProvider);

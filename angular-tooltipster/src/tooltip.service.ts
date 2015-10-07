@@ -1,3 +1,11 @@
+import {ITooltipDefaultOptions, ITooltipCommonOptions, ITooltipOpenOptions, ITooltipShowOnceOptions, TooltipPosition, TooltipSize} from "./tooltip.model";
+import {ITooltipProvider} from "./tooltip.provider";
+import {consts} from "./tooltip.const"
+import {ILog, ILoggerFactory} from "./_core/logger/logger.service";
+
+import TooltipsterInstance = JQueryTooltipster.ITooltipsterInstance;
+import TooltipsterOptions = JQueryTooltipster.ITooltipsterOptions;
+
 export class TooltipService {
 	static id = "tooltipService";
 
@@ -10,7 +18,6 @@ export class TooltipService {
 		private $rootScope: ng.IRootScopeService,
 		private $compile: ng.ICompileService,
 		private $translate: ng.translate.ITranslateService,
-		private $animate: ng.animate.IAnimateService,
 		private tooltip: ITooltipProvider
 		) {
 		this.logger = loggerFactory(TooltipService.id);
@@ -73,7 +80,7 @@ export class TooltipService {
 
 		var position: string;
 		if (!_.isUndefined(options.position) && (typeof options.position !== "string")) {
-			position = TooltipPosition[options.position].toLowerCase();
+			position = (<any>TooltipPosition)[options.position].toLowerCase();
 		} else {
 			position = <string>options.position;
 		}
@@ -108,7 +115,7 @@ export class TooltipService {
 
 		var size: string;
 		if (!_.isUndefined(options.size) && (typeof options.size !== "string")) {
-			size = TooltipSize[options.size].toLowerCase();
+			size = (<any>TooltipSize)[options.size].toLowerCase();
 		} else {
 			size = _.isUndefined(options.size) ? this._defaultOptions.size : <string>options.size;
 		}
@@ -164,5 +171,5 @@ export class TooltipService {
 }
 
 //TODO: make this using annotations
-angular.module(Consts.Module)
+angular.module(consts.moduleName)
 	.service(TooltipService.id, TooltipService);
