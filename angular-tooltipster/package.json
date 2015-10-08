@@ -24,10 +24,30 @@
     "url": "https://github.com/stephenlautier/experimental/tree/master/angular-tooltipster"
   },
   "jspm": {
+    "registry": "npm",
     "directories": {
       "baseURL": "example",
       "doc": "doc",
       "test": "test"
+    },
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.7",
+      "jquery": "github:components/jquery@^2.1.4",
+      "lodash": "^3.10.1"
+    },
+    "devDependencies": {
+      "browser-sync": "^2.9.10",
+      "del": "^2.0.2",
+      "dts-generator": "^1.5.0",
+      "gulp": "^3.9.0",
+      "gulp-sourcemaps": "^1.6.0",
+      "gulp-typescript": "^2.9.2",
+      "gulp-util": "^3.0.6",
+      "merge2": "^0.3.6",
+      "require-dir": "^0.3.0",
+      "run-sequence": "^1.1.4",
+      "typescript": "^1.6.2",
+      "typescript-require": "^0.2.9"
     }
   },
   "devDependencies": {

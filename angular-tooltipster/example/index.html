@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="ssv-lab">
+<html>
 
 <head>
 	<meta name="description" content="Angular.js tooltipster tooltips directive and service that generates tooltips on the elements.">
@@ -21,44 +21,8 @@
 			<div class="separator10"></div>
 			<div class="color-muted center-content">Put the mouse over the buttons</div>
 			<div class="separator10"></div>
-			<div class="line">
-				<div class="col5">
-					<div class="col5">
-						<div class="line-compress">
-							<a class="btn btn-medium center-content radius3 bg-purple color-white" tooltips tooltip-size="medium" title="Left tooltip"
-							tooltip-side="left">
-        Left
-      </a>
-						</div>
-					</div>
-					<div class="col5">
-						<div class="line-compress">
-							<a class="btn btn-medium center-content radius3 bg-purple color-white" tooltips tooltip-size="medium" title="Top tooltip"
-							tooltip-side="top">
-      Top
-    </a>
-						</div>
-					</div>
-				</div>
-				<div class="col5">
-					<div class="col5">
-						<div class="line-compress">
-							<a class="btn btn-medium center-content radius3 bg-purple color-white" tooltips tooltip-size="medium" title="Bottom tooltip"
-							tooltip-side="bottom">
-    Bottom
-  </a>
-						</div>
-					</div>
-					<div class="col5">
-						<div class="line-compress">
-							<a class="btn btn-medium center-content radius3 bg-purple color-white" tooltips tooltip-size="medium" title="Right tooltip"
-							tooltip-side="right">
-    Right
-  </a>
-						</div>
-					</div>
-				</div>
-			</div>
+
+			<ssv-tooltip-sample></ssv-tooltip-sample>
 
 			<div class="separator50"></div>
 			<!--footer-->
@@ -72,7 +36,7 @@
 			<script src="jspm_packages/system.js"></script>
 			<script src="config.js"></script>
 			<script>
-				System.import("app/main");
+				System.import("app/app.example");
 			</script>
 
 

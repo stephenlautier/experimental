@@ -23,7 +23,8 @@ module.exports = {
 			vendors: `${exampleRoot}dist/vendors`
 		},
 		src: {
-			ts: [tsdMainFile, `${exampleRoot}src/**/*.ts`]
+			ts: [tsdMainFile, `${exampleRoot}src/**/*.ts`],
+			html: [`${exampleRoot}**/*.html`],
 		}
 	}
 };

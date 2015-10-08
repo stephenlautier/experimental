@@ -9,7 +9,8 @@ gulp.task("watch", ["serve"], () => {
 	gulp.watch(paths.src.ts, ["compile:typescript", browserSync.reload]).on("change", reportChange).on("error", swallowError);;
 	
 	// sample
-	gulp.watch(paths.example.src.ts, ["example:compile:ts", browserSync.reload]).on("change", reportChange).on("error", swallowError);;
+	gulp.watch(paths.example.src.ts, ["example:compile:ts", browserSync.reload]).on("change", reportChange).on("error", swallowError);
+	gulp.watch(paths.example.src.html, [browserSync.reload]).on("change", reportChange).on("error", swallowError);
 
 });
 
