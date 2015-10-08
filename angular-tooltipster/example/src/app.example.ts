@@ -3,7 +3,7 @@ import * as angular from "angular";
 
 import {default as app} from "./app.module"; 
 //import {default as sampleDirective} from "./tooltip-sample.directive";
-//import {TooltipSampleController} from "./tooltip-sample.directive";
+
 //import {default as sampleDirective} from "./tooltip-sample";
 
 const id = "app.example";

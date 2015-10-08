@@ -92,7 +92,7 @@ export class TooltipSampleDirective implements angular.IDirective {
 		console.log("TooltipSampleDirective ctor!");
 	}
 
-				scope = {};
+	scope = {};
 	templateUrl = `${this.config.basePath}/tooltip-sample.html`;
 	replace = true;
 	controller = TooltipSampleController;
