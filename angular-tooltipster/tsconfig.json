@@ -7,7 +7,7 @@
 		"noLib": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"declaration": false
+		"declaration": true
 	},
 	"exclude": [
 		"node_modules",
