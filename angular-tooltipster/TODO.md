@@ -1,16 +1,9 @@
 TODO
 =====================
 
-- Setup JSPM or bower for plugins and install:
- - lodash
- - angularjs
- - angular-translate
- - tooltipster
- - jquery
 - Setup Gulp:
- - Build TypeScript
- - Build d.ts
  - Build typedoc?
+ - Bundle lib
 - Create a demo
  - Build for demo
  - Using SystemJS/AMD?
@@ -18,3 +11,6 @@ TODO
 - Separate "core/logger" 
 - Use @decorators for controller, directive, service
 - Some cleanup
+- Create it as a package
+	- Define dependencies for it
+	- JSPM registry
