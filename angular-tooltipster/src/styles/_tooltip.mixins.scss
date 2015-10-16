@@ -1,0 +1,35 @@
+@mixin tooltip-arrow-color($color) {
+
+	&.tooltipster-arrow-top, &.tooltipster-arrow-bottom {
+		&:before {
+			border-top-color: $color;
+			border-bottom-color: $color;
+		}
+	}
+
+	&.tooltipster-arrow-left, &.tooltipster-arrow-right {
+		&:before {
+			border-left-color: $color;
+			border-right-color: $color;
+		}
+	}
+}
+
+@mixin tooltip-arrow-container-border-color($border-color) {
+
+	&.tooltipster-top {
+		border-bottom: solid 2px $border-color;
+	}
+
+	&.tooltipster-bottom {
+		border-top: solid 2px $border-color;
+	}
+
+	&.tooltipster-left {
+		border-right: solid 2px $border-color;
+	}
+
+	&.tooltipster-right {
+		border-left: solid 2px $border-color;
+	}
+}

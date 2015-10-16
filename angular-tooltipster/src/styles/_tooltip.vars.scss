@@ -1,0 +1,34 @@
+
+// info tooltips (default)
+$tooltip-info-bg-color: white;
+$tooltip-info-text-color: #3b3b3b;
+$tooltip-info-border-color: #cfcfcf;
+
+// error tooltips (default)
+$tooltip-error-bg-color: white;
+$tooltip-error-text-color: #3b3b3b;
+$tooltip-error-border-color: #cfcfcf;
+
+// success tooltips (default)
+$tooltip-success-bg-color: white;
+$tooltip-success-text-color: #3b3b3b;
+$tooltip-success-border-color: #cfcfcf;
+
+// warning tooltips (default)
+$tooltip-warning-bg-color: white;
+$tooltip-warning-text-color: #3b3b3b;
+$tooltip-warning-border-color: #cfcfcf;
+
+
+
+// action
+$tooltip-action-default-color: $white-color;
+$tooltip-action-default-bg: $primary-color;
+
+// action - live
+//$tooltip-action-live-color: $white-color;
+$tooltip-action-live-bg: $tertiary-color;
+
+// action - error
+$tooltip-action-alert-color: $error-fg-color;
+$tooltip-action-alert-bg: $error-color;
