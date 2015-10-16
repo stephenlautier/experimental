@@ -25,8 +25,7 @@ gulp.task("sample:lib-build+sync", (cb) => {
 gulp.task("sample:build", (cb) => {
 
 	return runSeq(
-		"build",
-		"sample:copy-lib",
+		"sample:lib-build+sync",
 		"sample:compile:ts",
 		cb);
 
