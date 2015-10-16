@@ -4,7 +4,7 @@ var fs = require("fs");
 
 var pkg = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
 var appRoot = "src/";
-var exampleRoot = "example/";
+var sampleRoot = "sample/";
 const tsdMainFile = "tools/typings/tsd.d.ts";
 
 module.exports = {
@@ -15,16 +15,17 @@ module.exports = {
 	},
 	doc: "./doc",
 	packageName: pkg.name,
-	example: {
-		root: exampleRoot,
-		outputRoot: `${exampleRoot}dist`,
+	sample: {
+		root: sampleRoot,
+		outputRoot: `${sampleRoot}dist`,
 		output: {
-			app: `${exampleRoot}dist/app`,
-			vendors: `${exampleRoot}dist/vendors`
+			app: `${sampleRoot}dist/app`,
+			lib: `${sampleRoot}dist/lib`,
+			dts: `tools/typings/${pkg.name}`
 		},
 		src: {
-			ts: [tsdMainFile, `${exampleRoot}src/**/*.ts`],
-			html: [`${exampleRoot}**/*.html`],
+			ts: [tsdMainFile, `${sampleRoot}src/**/*.ts`],
+			html: [`${sampleRoot}**/*.html`],
 		}
 	}
 };

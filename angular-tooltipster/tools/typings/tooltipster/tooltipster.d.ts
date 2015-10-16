@@ -5,7 +5,9 @@
 
 /// <reference path="../jquery/jquery.d.ts" />
 
-
+declare module 'tooltipster' {
+    export = JQueryTooltipster;
+}
 declare module JQueryTooltipster {
 	/**
 	* Tooltipster options @see http://iamceege.github.io/tooltipster/

@@ -6,11 +6,12 @@ var paths = require("../paths")
 
 gulp.task("watch", ["serve"], () => {
 
-	gulp.watch(paths.src.ts, ["compile:ts", browserSync.reload]).on("change", reportChange).on("error", swallowError);;
+	//gulp.watch(paths.src.ts, ["build", browserSync.reload]).on("change", reportChange).on("error", swallowError);;
+	gulp.watch(`${paths.root}**/*.ts`, ["sample:lib-build+sync", browserSync.reload]).on("change", reportChange).on("error", swallowError);;
 	
 	// sample
-	gulp.watch(paths.example.src.ts, ["example:compile:ts", browserSync.reload]).on("change", reportChange).on("error", swallowError);
-	gulp.watch(paths.example.src.html, [browserSync.reload]).on("change", reportChange).on("error", swallowError);
+	gulp.watch(`${paths.sample.root}**/*.ts`, ["sample:compile:ts", browserSync.reload]).on("change", reportChange).on("error", swallowError);
+	gulp.watch(paths.sample.src.html, [browserSync.reload]).on("change", reportChange).on("error", swallowError);
 
 });
 
@@ -20,7 +21,7 @@ gulp.task("serve", (cb) => {
 		open: true,
 		port: 9000,
 		server: {
-			baseDir: ["example"],
+			baseDir: ["sample"],
 			index: "index.html",
 			middleware: function (req, res, next) {
 				res.setHeader("Access-Control-Allow-Origin", "*");

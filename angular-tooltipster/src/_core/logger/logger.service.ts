@@ -17,13 +17,7 @@ export interface ILog {
 	warn(source: string, message?: string, data?: any): void;
 }
 
-export interface ILoggerService {
-
-	log(logType: LogType, message: string, data?: any): void;
-
-}
-
-export class LoggerService implements ILoggerService {
+export class LoggerService {
 	static id = "loggerService";
 		
 	/*@ngInject*/
@@ -62,8 +56,8 @@ export class Logger implements ILog {
 
 	constructor(
 		private sourceId: string,
-		private loggerService: ILoggerService
-		) {
+		private loggerService: LoggerService
+	) {
 
 	}
 
@@ -93,17 +87,9 @@ export class Logger implements ILog {
 export interface ILoggerFactory {
 	(sourceId: string): ILog;
 }
-export interface ILoggerFactoryProvider extends ng.IServiceProvider {
 
+export function loggerFactory(loggerService: LoggerService) {
+	return (sourceId: string): ILog => {
+		return new Logger(sourceId, loggerService);
+	};
 }
-
-//TODO: use annotations.
-angular.module("slabs-core")
-	.service(LoggerService.id, LoggerService)
-	.factory("loggerFactory", (loggerService: ILoggerService) => {
-
-		return (sourceId: string): ILog => {
-			return new Logger(sourceId, loggerService);
-		};
-
-	});

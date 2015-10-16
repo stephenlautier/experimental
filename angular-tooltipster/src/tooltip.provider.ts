@@ -1,5 +1,7 @@
+import * as $ from "jquery";
+import * as tooltipster from "tooltipster";
 import {ITooltipDefaultOptions} from "./tooltip.model";
-import {consts} from "./tooltip.const"
+import {consts} from "./tooltip.const";
 
 export interface ITooltipProvider {
 	defaults: ITooltipDefaultOptions;
@@ -8,9 +10,9 @@ export interface ITooltipProvider {
 
 export class TooltipProvider implements ng.IServiceProvider {
 	static id = "tooltip";
-	
+
 	$get(): ITooltipProvider {
-		this.setTooltipsteDefaults(this.defaults);
+		this.setTooltipsterDefaults(this.defaults);
 		return <ITooltipProvider>{
 			setDefaults: this.setDefaults,
 			defaults: this.defaults
@@ -38,11 +40,14 @@ export class TooltipProvider implements ng.IServiceProvider {
 	* @returns
 	*/
 	setDefaults(newDefaults: ITooltipDefaultOptions): void {
-		angular.extend(this.defaults, newDefaults);
-		this.setTooltipsteDefaults(this.defaults);
+		$.extend(this.defaults, newDefaults);
+		this.setTooltipsterDefaults(this.defaults);
 	}
 
-	private setTooltipsteDefaults(newDefaults: JQueryTooltipster.ITooltipsterOptions) {
+	private setTooltipsterDefaults(newDefaults: tooltipster.ITooltipsterOptions) {
+		if (!$.fn["tooltipster"]) {
+			throw "Tooltipster not loaded!";
+		}
 		$.fn.tooltipster("setDefaults", newDefaults);
 	}
 }

@@ -2,8 +2,7 @@
 
 export class TooltipsConsts {
 	
-	moduleName = "ssv-angular-tooltipster"
-	
+	moduleName = "ssv-angular-tooltipster" 
 }
 
 export var consts = new TooltipsConsts();

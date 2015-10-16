@@ -6,11 +6,11 @@
   "directories": {
     "doc": "doc",
     "test": "test",
-    "baseURL": "example",
-    "packages": "example\\jspm_packages"
+    "baseURL": "sample",
+    "packages": "sample\\jspm_packages"
   },
   "scripts": {
-    "postinstall": ""
+    "postinstall": "jspm install"
   },
   "keywords": [
     "angularjs",
@@ -26,14 +26,16 @@
   "jspm": {
     "registry": "npm",
     "directories": {
-      "baseURL": "example",
+      "baseURL": "sample",
       "doc": "doc",
       "test": "test"
     },
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.7",
+      "angular-translate": "github:angular-translate/bower-angular-translate@^2.8.1",
       "jquery": "github:components/jquery@^2.1.4",
-      "lodash": "^3.10.1"
+      "lodash": "^3.10.1",
+      "tooltipster": "github:stephenlautier/tooltipster@^3.5.2"
     },
     "devDependencies": {
       "browser-sync": "^2.9.10",

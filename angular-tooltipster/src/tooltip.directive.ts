@@ -3,7 +3,6 @@ import {consts} from "./tooltip.const"
 
 import {TooltipService} from "./tooltip.service";
 
-
 /**
  * @see ITooltipOpenOptions
  */

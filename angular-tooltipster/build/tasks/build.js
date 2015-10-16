@@ -36,8 +36,8 @@ gulp.task("compile:ts", () => {
 		tsResult.js
 			.pipe(sourcemaps.write("."))
 			.pipe(gulp.dest(paths.output)),
-		tsResult.dts
-			.pipe(gulp.dest(paths.output))
+		// tsResult.dts
+		// 	.pipe(gulp.dest(paths.output))
 	]);
 });
 
@@ -55,15 +55,15 @@ gulp.task("compile:dts", () => {
 	});
 });
 
-// d.ts generation using dts-bundle
-gulp.task("compile:dtsbundle", () => {
-	
-	return dts.bundle({
-		name: "angular-tooltipster",
-		main: "dist/index.d.ts",
-		baseDir: "dist",
-		externals: true,
-		verbose: true
-	})
-	
-});
+// // d.ts generation using dts-bundle
+// gulp.task("compile:dtsbundle", () => {
+// 	
+// 	return dts.bundle({
+// 		name: "angular-tooltipster",
+// 		main: "dist/index.d.ts",
+// 		baseDir: "dist",
+// 		externals: true,
+// 		verbose: true
+// 	})
+// 	
+// });
