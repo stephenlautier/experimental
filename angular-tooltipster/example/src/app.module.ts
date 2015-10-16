@@ -3,7 +3,10 @@ import * as angular from "angular";
 
 import {Config} from "./app.config";
 import {tooltipSampleDirective} from "./tooltip-sample.directive";
-//import {con} from "ssv-angular-tooltipster"
+import {consts, TooltipService} from "angular-tooltipster";
+
+
+alert("Yolo! " + consts.moduleName)
 
 let app = angular.module("ssv-lab", [
 	
