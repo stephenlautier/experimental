@@ -46,6 +46,3 @@ export class TooltipProvider implements ng.IServiceProvider {
 		$.fn.tooltipster("setDefaults", newDefaults);
 	}
 }
-
-angular.module(consts.moduleName)
-	.provider(TooltipProvider.id, TooltipProvider);

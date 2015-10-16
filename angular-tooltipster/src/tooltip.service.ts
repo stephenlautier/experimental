@@ -169,7 +169,3 @@ export class TooltipService {
 
 
 }
-
-//TODO: make this using annotations
-angular.module(consts.moduleName)
-	.service(TooltipService.id, TooltipService);

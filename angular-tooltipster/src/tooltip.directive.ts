@@ -30,7 +30,7 @@ export interface ITooltipAttributes extends ng.IAttributes {
  * Usage Example:
  *		<button ssv-tooltip ssv-tooltip-content="tooltip.hello-friends" ></button> 
  */
-class TooltipDirective implements ng.IDirective {
+export class TooltipDirective implements ng.IDirective {
 	static id = "ssvTooltip";
 
 	private logger: ILog;
@@ -97,5 +97,3 @@ class TooltipDirective implements ng.IDirective {
 		return directive;
 	}
 }
-angular.module(consts.moduleName)
-	.directive(TooltipDirective.id, TooltipDirective.factory());
