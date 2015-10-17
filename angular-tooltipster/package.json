@@ -58,6 +58,7 @@
     "dts-bundle": "^0.3.0",
     "dts-generator": "^1.5.0",
     "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.9.2",

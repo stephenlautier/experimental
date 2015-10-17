@@ -21,7 +21,8 @@ module.exports = {
 		output: {
 			app: `${sampleRoot}dist/app`,
 			lib: `${sampleRoot}dist/lib`,
-			dts: `tools/typings/${pkg.name}`
+			dts: `tools/typings/${pkg.name}`,
+			appFileName: "app-build.js"
 		},
 		src: {
 			ts: [tsdMainFile, `${sampleRoot}src/**/*.ts`],

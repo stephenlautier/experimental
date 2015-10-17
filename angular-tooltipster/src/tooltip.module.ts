@@ -8,7 +8,7 @@ import {TooltipDirective} from "./tooltip.directive";
 // force load it
 if(ngTranslate){}
 
-console.log(`>>> REGISTER ${consts.moduleName}`);
+console.log(`>>> REGISTER ng-module '${consts.moduleName}'`);
 let angularTooltipsterModule = angular.module(consts.moduleName, [
 	"pascalprecht.translate" // angular-translate
 ]);

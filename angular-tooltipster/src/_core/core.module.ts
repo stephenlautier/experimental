@@ -3,7 +3,7 @@ import {LoggerService, Logger, ILog, ILoggerFactory, loggerFactory } from "./log
 import {consts} from "./core.consts";
 
 
-console.log(`>>> REGISTER ${consts.moduleName}`);
+console.log(`>>> REGISTER ng-module '${consts.moduleName}'`);
 let coreModule = angular.module(consts.moduleName, [
 
 ]);

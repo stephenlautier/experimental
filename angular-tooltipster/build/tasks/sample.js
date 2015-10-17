@@ -5,6 +5,7 @@ var typescript = require("typescript");
 var tsc = require("gulp-typescript");
 var sourcemaps = require("gulp-sourcemaps");
 var plumber = require("gulp-plumber");
+var concat = require("gulp-concat");
 var del = require("del");
 var jspm = require("jspm");
 
@@ -41,16 +42,36 @@ gulp.task("sample:compile:ts", () => {
 	]);
 });
 
-gulp.task("sample:rel", ["sample:build"], () => {
-	jspm.setPackagePath(".")
-
-	return jspm.bundle("app/app.sample", `${paths.sample.outputRoot}/app-build.js`, { mangle: false, inject: true });
-});
-
 gulp.task("sample:clean", () => {
 
 	return del([paths.sample.outputRoot, paths.sample.output.dts]);
 });
+
+
+// rel
+//---------------
+
+gulp.task("sample:bundle", ["sample:build"], () => {
+	jspm.setPackagePath(".")
+
+	return jspm.bundle("app/app.sample", `${paths.sample.outputRoot}/${paths.sample.output.appFileName}`, {
+		mangle: false,
+		inject: true
+	});
+});
+
+gulp.task("sample:massa-special", ["sample:bundle"], () => {
+
+	return gulp.src([
+		`${paths.sample.root}jspm_packages/system.js`,
+		`${paths.sample.root}config.js`,
+		`${paths.sample.outputRoot}/${paths.sample.output.appFileName}`
+	])
+		.pipe(concat(`${paths.sample.output.appFileName}`))
+		.pipe(gulp.dest(`${paths.sample.outputRoot}`))
+
+});
+
 
 
 // lib
