@@ -7,21 +7,44 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  bundles: {
+    "app-build": [
+      "app/app.sample",
+      "github:angular/bower-angular@1.4.7",
+      "app/app.module",
+      "github:stephenlautier/tooltipster@3.5.2",
+      "github:components/jquery@2.1.4",
+      "lib/index",
+      "app/app.config",
+      "app/tooltip-sample.directive",
+      "github:stephenlautier/tooltipster@3.5.2/js/jquery.tooltipster.min",
+      "github:components/jquery@2.1.4/jquery",
+      "github:angular/bower-angular@1.4.7/angular",
+      "lib/tooltip.provider",
+      "lib/tooltip.const",
+      "lib/tooltip.model",
+      "lib/tooltip.module",
+      "lib/tooltip.service",
+      "lib/_core/index",
+      "github:angular-translate/bower-angular-translate@2.8.1",
+      "lib/tooltip.directive",
+      "lib/_core/core.consts",
+      "lib/_core/core.module",
+      "lib/_core/logger/logger.service",
+      "github:angular-translate/bower-angular-translate@2.8.1/angular-translate"
+    ]
+  },
 
   meta: {
-    // "apps/*": {
-    //   "format": "register"
-    // },
-    "app": {
+    "app/app.sample": {
       "deps": [
         "jquery",
-        "tooltipster",
+        "tooltipster"
       ]
     }
   },
 
   map: {
-    "app": "app/app.sample",
     "angular": "github:angular/bower-angular@1.4.7",
     "angular-tooltipster": "lib/index",
     "angular-translate": "github:angular-translate/bower-angular-translate@2.8.1",
