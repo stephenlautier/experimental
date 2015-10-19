@@ -1,6 +1,6 @@
 {
   "name": "ssv-angular-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ssv angularjs core utilities and service",
   "main": "dist/ssv-angular-core.js",
   "directories": {
@@ -29,6 +29,13 @@
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.7",
       "jquery": "github:components/jquery@^2.1.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4",
+      "false": "npm:babel-core@^5.8.24",
+      "false-runtime": "npm:babel-runtime@^5.8.24"
     }
   },
   "devDependencies": {
@@ -36,6 +43,7 @@
     "del": "^2.0.2",
     "dts-generator": "^1.5.0",
     "gulp": "^3.9.0",
+    "gulp-bump": "^1.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sourcemaps": "^1.6.0",
@@ -50,6 +58,7 @@
     "merge2": "^0.3.6",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.4",
-    "typescript": "^1.6.2"
+    "typescript": "^1.6.2",
+    "yargs": "^3.27.0"
   }
 }

@@ -10,6 +10,7 @@ const tsdMainFile = "tools/typings/tsd.d.ts";
 module.exports = {
 	root: appRoot,
 	output: "dist/",
+	artifact: "_artifact",
 	src: {
 		ts: `${appRoot}/**/*.ts`,
 		tsd: tsdMainFile

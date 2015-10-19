@@ -6,6 +6,7 @@ var tsc = require("gulp-typescript");
 var sourcemaps = require("gulp-sourcemaps");
 var plumber = require("gulp-plumber");
 var dtsGen = require("dts-generator");
+var jspm = require("jspm");
 
 var paths = require("../paths");
 
@@ -20,7 +21,15 @@ gulp.task("build", (cb) => {
 	return runSeq(
 		["compile:ts", "compile:dts"],
 		cb);
+});
 
+gulp.task("build:rel", (cb) => {
+
+	return runSeq(
+		"clean",
+		"build",
+		"compile:bundle",
+		cb);
 });
 
 gulp.task("compile:ts", () => {
@@ -34,9 +43,9 @@ gulp.task("compile:ts", () => {
 	return merge([
 		tsResult.js
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(paths.output)),
+			.pipe(gulp.dest(paths.artifact)),
 		// tsResult.dts
-		// 	.pipe(gulp.dest(paths.output))
+		// 	.pipe(gulp.dest(paths.artifact))
 	]);
 });
 
@@ -52,4 +61,17 @@ gulp.task("compile:dts", () => {
 	}, (msg) => {
 		console.log(`Generating ${paths.packageName}.d.ts: ${msg}`);
 	});
+});
+
+
+gulp.task("compile:bundle", [], () => {
+
+	jspm.setPackagePath(".")
+
+	return jspm.bundle(`${paths.packageName} - angular`,
+		`${paths.output}/${paths.packageName}.js`, {
+			mangle: false,
+			inject: false,
+			sourceMaps: true
+		});
 });

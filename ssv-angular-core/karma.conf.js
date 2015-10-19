@@ -15,7 +15,8 @@ module.exports = function (config) {
     jspm: {
       // config: "config.js",
       // packages: "jspm_packages/",
-      loadFiles: ["_tmp/test/**/*.js", "dist/**/*.js"],
+      //loadFiles: ["_artifact/test/**/*.js", "_artifact/**/*.js"],
+      loadFiles: ["_artifact/**/*.js"],
       paths: {
         "*": "*.js"
       }

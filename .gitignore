@@ -6,4 +6,9 @@ bower_components
 build/reports
 
 **/example/dist
-dist
+_artifact/
+
+
+# angular-tooltipster
+angular-tooltipster/sample/dist/
+angular-tooltipster/dist/
