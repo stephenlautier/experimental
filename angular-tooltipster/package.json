@@ -63,6 +63,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.9.2",
     "gulp-util": "^3.0.6",
+    "jspm": "^0.16.13",
     "merge2": "^0.3.6",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.4",
