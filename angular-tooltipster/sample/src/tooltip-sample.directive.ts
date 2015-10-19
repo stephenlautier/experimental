@@ -1,11 +1,8 @@
-// import {ILog, ILoggerFactory} from "./_core/logger/logger.service";
-// import {consts} from "./tooltip.const"
-// 
-// import {TooltipService} from "./tooltip.service";
 import * as angular from "angular";
 
 import {Config} from "./app.config";
-import {consts, TooltipService, ILoggerFactory, ILog, TooltipPosition, TooltipSize } from "angular-tooltipster";
+import {consts, TooltipService, TooltipPosition, TooltipSize } from "angular-tooltipster";
+import {ILog, ILoggerFactory} from "ssv-angular-core";
 
 
 export class TooltipSampleController {

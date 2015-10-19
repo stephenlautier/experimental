@@ -12,7 +12,8 @@ System.config({
     "app/app.sample": {
       "deps": [
         "jquery",
-        "tooltipster"
+        "tooltipster",
+        "ssv-angular-core"
       ]
     }
   },
@@ -33,6 +34,7 @@ System.config({
     "merge2": "npm:merge2@0.3.6",
     "require-dir": "npm:require-dir@0.3.0",
     "run-sequence": "npm:run-sequence@1.1.4",
+    "ssv-angular-core": "github:stephenlautier/ssv-angular-core@0.1.1",
     "tooltipster": "github:stephenlautier/tooltipster@3.5.2",
     "typescript": "npm:typescript@1.6.2",
     "typescript-require": "npm:typescript-require@0.2.9",
@@ -110,6 +112,10 @@ System.config({
     },
     "github:jspm/nodelibs-zlib@0.1.0": {
       "browserify-zlib": "npm:browserify-zlib@0.1.4"
+    },
+    "github:stephenlautier/ssv-angular-core@0.1.1": {
+      "angular": "github:angular/bower-angular@1.4.7",
+      "jquery": "github:components/jquery@2.1.4"
     },
     "npm:abbrev@1.0.7": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

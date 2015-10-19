@@ -1,7 +1,7 @@
 import {ITooltipDefaultOptions, ITooltipCommonOptions, ITooltipOpenOptions, ITooltipShowOnceOptions, TooltipPosition, TooltipSize} from "./tooltip.model";
 import {ITooltipProvider} from "./tooltip.provider";
 import {consts} from "./tooltip.const"
-import {ILog, ILoggerFactory} from "./_core/logger/logger.service";
+import {ILog, ILoggerFactory} from "ssv-angular-core";
 
 import TooltipsterInstance = JQueryTooltipster.ITooltipsterInstance;
 import TooltipsterOptions = JQueryTooltipster.ITooltipsterOptions;

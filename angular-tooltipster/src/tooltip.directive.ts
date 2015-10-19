@@ -1,4 +1,4 @@
-import {ILog, ILoggerFactory} from "./_core/logger/logger.service";
+import {ILog, ILoggerFactory } from "ssv-angular-core";
 import {consts} from "./tooltip.const"
 
 import {TooltipService} from "./tooltip.service";

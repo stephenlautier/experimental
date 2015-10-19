@@ -1,0 +1,1 @@
+/// <reference path="ssv-angular-core/ssv-angular-core.d.ts" />

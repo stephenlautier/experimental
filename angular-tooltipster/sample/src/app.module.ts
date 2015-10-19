@@ -3,8 +3,10 @@ import * as angular from "angular";
 
 import {Config} from "./app.config";
 import {tooltipSampleDirective} from "./tooltip-sample.directive";
-import {consts as angularTooltipsterConsts, coreConsts, TooltipProvider} from "angular-tooltipster";
+import {consts as angularTooltipsterConsts, TooltipProvider} from "angular-tooltipster";
+import {coreConsts} from "ssv-angular-core";
 
+debugger
 console.log("app.module:: pre-module")
 let app = angular.module("ssv-lab", [
 	angularTooltipsterConsts.moduleName,

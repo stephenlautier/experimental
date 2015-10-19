@@ -172,46 +172,10 @@ declare module 'angular-tooltipster/tooltip.provider' {
 	}
 
 }
-declare module 'angular-tooltipster/_core/logger/logger.service' {
-	export const enum LogType {
-	    Debug = 0,
-	    Info = 1,
-	    Warning = 2,
-	    Error = 3,
-	    Success = 4,
-	}
-	export interface ILog {
-	    debug(source: string, message?: string, data?: any): void;
-	    info(source: string, message?: string, data?: any): void;
-	    error(source: string, message?: string, data?: any): void;
-	    warn(source: string, message?: string, data?: any): void;
-	}
-	export class LoggerService {
-	    private $log;
-	    static id: string;
-	    constructor($log: ng.ILogService);
-	    log(logType: LogType, message: string, data?: any): void;
-	}
-	export class Logger implements ILog {
-	    private sourceId;
-	    private loggerService;
-	    constructor(sourceId: string, loggerService: LoggerService);
-	    debug(source: string, message?: string, data?: any): void;
-	    info(source: string, message?: string, data?: any): void;
-	    error(source: string, message?: string, data?: any): void;
-	    warn(source: string, message?: string, data?: any): void;
-	    private _log(sourceId, source, logType, message?, data?);
-	}
-	export interface ILoggerFactory {
-	    (sourceId: string): ILog;
-	}
-	export function loggerFactory(loggerService: LoggerService): (sourceId: string) => ILog;
-
-}
 declare module 'angular-tooltipster/tooltip.service' {
 	import { ITooltipOpenOptions, ITooltipShowOnceOptions } from 'angular-tooltipster/tooltip.model';
 	import { ITooltipProvider } from 'angular-tooltipster/tooltip.provider';
-	import { ILoggerFactory } from 'angular-tooltipster/_core/logger/logger.service';
+	import { ILoggerFactory } from "ssv-angular-core";
 	import TooltipsterInstance = JQueryTooltipster.ITooltipsterInstance;
 	export class TooltipService {
 	    private $rootScope;
@@ -243,7 +207,7 @@ declare module 'angular-tooltipster/tooltip.service' {
 
 }
 declare module 'angular-tooltipster/tooltip.directive' {
-	import { ILoggerFactory } from 'angular-tooltipster/_core/logger/logger.service';
+	import { ILoggerFactory } from "ssv-angular-core";
 	import { TooltipService } from 'angular-tooltipster/tooltip.service';
 	/**
 	 * @see ITooltipOpenOptions
@@ -284,31 +248,12 @@ declare module 'angular-tooltipster/tooltip.module' {
 	export default angularTooltipsterModule;
 
 }
-declare module 'angular-tooltipster/_core/core.consts' {
-	export class CoreConsts {
-	    moduleName: string;
-	}
-	export var consts: CoreConsts;
-
-}
-declare module 'angular-tooltipster/_core/core.module' {
-	import * as angular from 'angular'; let coreModule: angular.IModule;
-	export default coreModule;
-
-}
-declare module 'angular-tooltipster/_core/index' {
-	export { ILoggerFactory, ILog } from 'angular-tooltipster/_core/logger/logger.service';
-	export { default as coreModule } from 'angular-tooltipster/_core/core.module';
-	export { consts as coreConsts } from 'angular-tooltipster/_core/core.consts';
-
-}
 declare module 'angular-tooltipster/index' {
 	export * from 'angular-tooltipster/tooltip.const';
 	export * from 'angular-tooltipster/tooltip.service';
 	export * from 'angular-tooltipster/tooltip.provider';
 	export * from 'angular-tooltipster/tooltip.model';
 	export { default as angularTooltipsterModule } from 'angular-tooltipster/tooltip.module';
-	export * from 'angular-tooltipster/_core/index';
 
 }
 declare module 'angular-tooltipster' {
