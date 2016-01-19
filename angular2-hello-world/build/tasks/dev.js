@@ -7,17 +7,15 @@ var paths = require("../paths")
 gulp.task("watch", ["serve"], () => {
 
 	// ts
-	gulp.watch(`${paths.src.root}/**/*.ts`, ["compile:ts", browserSync.reload])
+	gulp.watch(paths.src.ts, ["compile:ts", browserSync.reload])
 		.on("change", reportChange)
 		.on("error", swallowError);
 		
 	// html
-	
+	gulp.watch([paths.src.html, paths.src.indexHtml], ["html", browserSync.reload])
+		.on("change", reportChange)
+		.on("error", swallowError);
 	// sass
-	
-	// sample
-	// gulp.watch(`${paths.sample.root}**/*.ts`, ["sample:compile:ts", browserSync.reload]).on("change", reportChange).on("error", swallowError);
-	// gulp.watch(paths.sample.src.html, [browserSync.reload]).on("change", reportChange).on("error", swallowError);
 
 });
 

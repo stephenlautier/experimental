@@ -8,13 +8,12 @@ var plumber = require("gulp-plumber");
 var paths = require("../paths");
 
 gulp.task("build", (cb) => {
-
 	return runSeq(
-		["compile:ts"],
+		["compile:ts", "html"],
 		cb);
-
 });
 
+// scripts
 gulp.task("compile:ts", () => {
 	var tsProject = getTscProject();
 	var tsResult = gulp.src(paths.src.ts)
@@ -34,3 +33,21 @@ function getTscProject() {
 		typescript: typescript
 	});
 }
+
+// html
+gulp.task("html", (cb) => {
+	return runSeq(
+		["compile:html", "compile:index-html"],
+		cb);
+});
+
+
+gulp.task("compile:html", () => {
+	return gulp.src(paths.src.html)
+		.pipe(gulp.dest(`${paths.output.root}/${paths.output.dist}`))
+});
+
+gulp.task("compile:index-html", () => {
+	return gulp.src(paths.src.indexHtml)
+		.pipe(gulp.dest(paths.output.root))
+});
