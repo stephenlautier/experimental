@@ -1,3 +1,4 @@
+import "bootstrap/css/bootstrap.css!";
 import {Component} from "angular2/core";
 import {Todo, TodoList, TodoForm} from "./todo/todo";
 import config from "./app.config";
@@ -11,7 +12,7 @@ export class AppComponent {
 
 	todos: Todo[] = [
 		{ text: "learn angular2", isDone: false },
-		{ text: "prepare angular2 hello world", isDone: true },
+		{ text: "prepare angular2 - hello world", isDone: true },
 		{ text: "do presentation", isDone: false }
 	];
 
