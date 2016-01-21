@@ -15,6 +15,7 @@ gulp.task("watch", ["serve"], () => {
 	gulp.watch([paths.src.html, paths.src.indexHtml], ["html", browserSync.reload])
 		.on("change", reportChange)
 		.on("error", swallowError);
+		
 	// sass
 
 });

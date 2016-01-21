@@ -14,9 +14,9 @@ module.exports = {
 	src: {
 		root: srcRoot,
 		tsd: tsdMainFile,
-		ts: `${srcRoot}/**/*.ts`,
-		html: `${srcRoot}/app/**/*.html`,
-		indexHtml: `${srcRoot}/index.html`
+		ts: `./${srcRoot}/**/*.ts`,
+		html: `./${srcRoot}/app/**/*.html`,
+		indexHtml: `./${srcRoot}/index.html`
 	},
 	doc: "./doc",
 	packageName: pkg.name

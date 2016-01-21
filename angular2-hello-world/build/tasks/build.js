@@ -44,7 +44,7 @@ gulp.task("html", (cb) => {
 
 gulp.task("compile:html", () => {
 	return gulp.src(paths.src.html)
-		.pipe(gulp.dest(`${paths.output.root}/${paths.output.dist}`))
+		.pipe(gulp.dest(`${paths.output.root}/${paths.output.dist}/app`))
 });
 
 gulp.task("compile:index-html", () => {
