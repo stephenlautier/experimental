@@ -1,4 +1,5 @@
-<label>Name</label>
-<input type="text" [(ngModel)]="title" placeholder="Enter a name...">
-<hr>
-<h1 [hidden]="!title">Hello {{title}}</h1>
+<h2>Todo</h2>
+<span>{{remaining}} of {{todos.length}} remaining</span>
+[ <a href="javascript:false" (click)="archive()">archive</a> ]
+<todo-list [todos]="todos"></todo-list>
+<todo-form (newTask)="addTask($event)"></todo-form>
