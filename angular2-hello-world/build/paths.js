@@ -9,7 +9,7 @@ const tsdMainFile = "typings/tsd.d.ts";
 module.exports = {
 	output: {
 		root: outRoot,
-		dist: "dist"
+		dist: `${outRoot}/dist`
 	},
 	src: {
 		root: srcRoot,

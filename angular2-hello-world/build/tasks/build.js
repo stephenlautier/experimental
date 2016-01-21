@@ -18,13 +18,13 @@ gulp.task("compile:ts", () => {
 	var tsProject = getTscProject();
 	var tsResult = gulp.src(paths.src.ts)
 		.pipe(plumber())
-	//.pipe(changed(paths.dist.appJs, { extension: ".js" }))
+	//.pipe(changed(paths.output.dist, { extension: ".js" }))
 		.pipe(sourcemaps.init())
 		.pipe(tsc(tsProject));
 
 	return tsResult.js
 		.pipe(sourcemaps.write("."))
-		.pipe(gulp.dest(`${paths.output.root}/${paths.output.dist}`))
+		.pipe(gulp.dest(`${paths.output.dist}`))
 });
 
 function getTscProject() {
@@ -44,7 +44,7 @@ gulp.task("html", (cb) => {
 
 gulp.task("compile:html", () => {
 	return gulp.src(paths.src.html)
-		.pipe(gulp.dest(`${paths.output.root}/${paths.output.dist}/app`))
+		.pipe(gulp.dest(`${paths.output.dist}/app`))
 });
 
 gulp.task("compile:index-html", () => {
