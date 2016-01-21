@@ -6,6 +6,7 @@ bower_components
 build/reports
 
 **/example/dist
+**/wwwroot/dist
 _artifact/
 
 
