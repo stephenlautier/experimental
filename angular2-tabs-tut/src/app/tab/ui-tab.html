@@ -1,0 +1,6 @@
+<ul class="nav nav-tabs">
+	<li *ngFor="#pane of panes" (click)="select(pane)" role="presentation" [class.active]="pane.active">
+		<a href="javascript: false">{{pane.title}}</a>
+	</li>
+</ul>
+<ng-content></ng-content>

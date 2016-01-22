@@ -1,0 +1,16 @@
+<ui-tabs>
+	<template ui-pane title="Overview" active="true">
+		You have {{details.length}} details.
+	</template>
+	<template *ngFor="#detail of details" ui-pane [title]="detail.title">
+		{{detail.text}}
+		<br>
+		<br>
+		<button class="btn btn-primary" (click)="removeDetail(detail)">Remove</button>
+	</template>
+	<template ui-pane title="Summary">
+		Next last ID is {{id}}.
+	</template>
+	<hr>
+	<button class="btn" (click)="addDetail()">Add Detail</button>
+</ui-tabs>
