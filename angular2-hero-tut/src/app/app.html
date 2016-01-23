@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<h2>My Hereos</h2>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-2">
+			<my-hero-list [heroes]="heroes" (selectHero)="onSelect($event)"></my-hero-list>
+		</div>
+		<div *ngIf="selectedHero" class="col-xs-10">
+			<my-hero-detail [hero]="selectedHero"></my-hero-detail>
+		</div>
+	</div>
+</div>
