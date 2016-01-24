@@ -8,8 +8,21 @@
 			<small>{{hero.caption}}</small>
 		</h1>
 	</div>
-	<div>
-		<p>{{hero.description}}</p>
+	<div class="pull-left">
+		<img src="/dist/assets/imgs/heroes/{{hero.key}}.jpg" alt="{{hero.title}}" class="img-thumbnail">
+		<div>
+			<span class="hero-role badge">{{ hero.role }}</span>
+		</div>
 	</div>
-	<a [routerLink]="['Heroes']">Back</a>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8">
+				<p class="lead">{{hero.description}}</p>
+				<a [routerLink]="['Heroes']">Back</a>
+			</div>
+
+		</div>
+
+	</div>
+
 </div>

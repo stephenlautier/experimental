@@ -15,5 +15,12 @@ h2 {
 }
 
 h3 {
-	color: $primary-lightest-color;
+	color: $primary-lighter-color;
+}
+
+a {
+	color: $primary-light-color;
+	&:hover {
+		color: $primary-lighter-color;
+	}
 }

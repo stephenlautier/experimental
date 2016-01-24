@@ -1,5 +1,5 @@
 export class AppConfig {
-	name = "Heroes";
+	name = "Heroes of the Storm";
 	version = "1.0.0-alpha";
 	basePath = "dist/app";
 }

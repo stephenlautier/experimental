@@ -10,14 +10,14 @@ var paths = require("../paths");
 
 gulp.task("build", (cb) => {
 	return runSeq(
-		["compile:ts", "html"],
+		["compile:ts", "html", "copy:imgs"],
 		cb);
 });
 
 // scripts
 gulp.task("compile:ts", () => {
 	var tsProject = getTscProject();
-	var tsResult = gulp.src(paths.src.ts)
+	var tsResult = gulp.src([paths.src.tsd, paths.src.ts])
 		.pipe(plumber())
 	//.pipe(changed(paths.output.dist, { extension: ".js" }))
 		.pipe(sourcemaps.init())

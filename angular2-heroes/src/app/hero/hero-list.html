@@ -2,8 +2,13 @@
 	<h1>{{title}}</h1>
 </div>
 
-<div class="heroes" *ngFor="#hero of heroes">
-	<div class="hero">
-		<h2><a [routerLink]="['HeroDetail', {hero: hero.key}]">{{ hero.title }}</a></h2> [{{ hero.role }}] {{ hero.caption}}
+<div class="hero-list">
+	<div class="hero-container" *ngFor="#hero of heroes">
+		<a [routerLink]="['HeroDetail', {hero: hero.key}]">
+			<img src="/dist/assets/imgs/heroes/{{hero.key}}.jpg" alt="{{hero.title}}" class="img-thumbnail">
+
+			<h4 class="hero-name">{{ hero.title }}</h4> 
+			<h5 class="hero-caption"> <span class="hero-role badge">{{ hero.role }}</span>{{ hero.caption}}</h5>
+		</a>
 	</div>
 </div>

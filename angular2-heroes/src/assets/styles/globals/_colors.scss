@@ -8,6 +8,11 @@ $primary-color: #170A29;
 $primary-light-color: lighten($primary-color, 10%);
 $primary-lighter-color: lighten($primary-color, 20%);
 
+
+$secondary-color: #013242;
+$secondary-light-color: lighten($secondary-color, 10%);
+$secondary-lighter-color: lighten($secondary-color, 20%);
+
 $error-color: darkred;
 
 // backgrounds

@@ -29,8 +29,4 @@ export class HeroDetailComponent implements OnInit {
 		return this._heroService.getByKey(key)
 			.then((hero: Hero) => this.hero = hero);
 	}
-
-	isSelected(hero: Hero) {
-		return hero.key === this.key;
-	}
 }
