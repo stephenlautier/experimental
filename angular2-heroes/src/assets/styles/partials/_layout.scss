@@ -10,9 +10,7 @@ html {
 }
 
 body {
-	// background: $primary-bg-color!important;
-	background: none!important;
-	color: $primary-color;
+	background: none!important;	
 	margin-bottom: 60px;
 		
 	.main.container {
@@ -38,7 +36,7 @@ footer {
 	}
 }
 
-.nav{
+.nav {
 	.user-profile {
 		img {
 			width: 30px;

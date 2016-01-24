@@ -5,5 +5,5 @@ import config from "../app.config";
 	templateUrl: `${config.basePath}/home/home.html`
 })
 export class HomeComponent {
-
+	title = config.name;
 }

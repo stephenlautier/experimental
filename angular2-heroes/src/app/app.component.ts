@@ -1,6 +1,4 @@
-import "bootstrap/css/bootstrap.css!";
-import "assets/styles/app.css!";
-
+// import "bootstrap/css/bootstrap.css!";
 import {Component, OnInit} from "angular2/core";
 import {RouteConfig, ROUTER_DIRECTIVES} from "angular2/router";
 import config from "./app.config";
