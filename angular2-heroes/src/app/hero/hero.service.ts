@@ -5,7 +5,14 @@ import {Heroes} from "./mock-heroes";
 
 @Injectable()
 export class HeroService {
-	getHeroes(): Promise<Hero[]> {
+	getAll(): Promise<Hero[]> {
 		return Promise.resolve(Heroes);
+	}
+
+	getByKey(key: string): Promise<Hero> {
+		return this.getAll().then(x => {
+			//TODO: implement
+			return x[0];
+		});
 	}
 }

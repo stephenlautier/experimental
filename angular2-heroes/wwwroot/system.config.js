@@ -13,7 +13,8 @@ System.config({
       "deps": [
         "reflect-metadata",
         "es6-shim",
-        "@reactivex/rxjs"
+        "@reactivex/rxjs",
+		"angular2-router"
       ]
     }
   },
@@ -21,6 +22,7 @@ System.config({
   map: {
     "@reactivex/rxjs": "npm:@reactivex/rxjs@5.0.0-beta.1",
     "angular2": "npm:angular2@2.0.0-beta.1",
+    "angular2-router": "npm:angular2@2.0.0-beta.1/bundles/router.dev",
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "css": "github:systemjs/plugin-css@0.1.20",
     "es6-shim": "github:es-shims/es6-shim@0.34.1",

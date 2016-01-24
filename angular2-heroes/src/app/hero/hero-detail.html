@@ -1,8 +1,15 @@
-<h2>{{hero.name}} details!</h2>
-<div>
-	<label>id: </label>{{hero.id}}
-</div>
-<label for="title">name: </label>
-<div>
-	<input type="text" [(ngModel)]="hero.name" id="title" placeholder="name here...">
+<div *ngIf="hero">
+	<div class="page-header">
+		<h1>
+			<a [routerLink]="['Heroes']">
+				<i class="glyphicon glyphicon-chevron-left"></i>
+			</a>
+			{{hero.title}}
+			<small>{{hero.caption}}</small>
+		</h1>
+	</div>
+	<div>
+		<p>{{hero.description}}</p>
+	</div>
+	<a [routerLink]="['Heroes']">Back</a>
 </div>

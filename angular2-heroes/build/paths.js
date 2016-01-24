@@ -16,6 +16,8 @@ module.exports = {
 		tsd: tsdMainFile,
 		ts: `./${srcRoot}/**/*.ts`,
 		html: `./${srcRoot}/app/**/*.html`,
+		sass: `./${srcRoot}/assets/**/*.scss`,
+		imgs: `./${srcRoot}/assets/**/*.{png,jpeg,jpg}`,
 		indexHtml: `./${srcRoot}/index.html`
 	},
 	doc: "./doc",

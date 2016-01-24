@@ -4,6 +4,7 @@ var typescript = require("typescript");
 var tsc = require("gulp-typescript");
 var sourcemaps = require("gulp-sourcemaps");
 var plumber = require("gulp-plumber");
+var sass = require("gulp-sass");
 
 var paths = require("../paths");
 
@@ -34,6 +35,14 @@ function getTscProject() {
 	});
 }
 
+// sass
+gulp.task("compile:sass", () => {
+	return gulp.src(paths.src.sass)
+		.pipe(sass().on("error", sass.logError))
+		.pipe(gulp.dest(`${paths.output.dist}/assets`))
+});
+
+
 // html
 gulp.task("html", (cb) => {
 	return runSeq(
@@ -50,4 +59,11 @@ gulp.task("compile:html", () => {
 gulp.task("compile:index-html", () => {
 	return gulp.src(paths.src.indexHtml)
 		.pipe(gulp.dest(paths.output.root))
+});
+
+
+// images
+gulp.task("copy:imgs", () => {
+	return gulp.src(paths.src.imgs)
+		.pipe(gulp.dest(`${paths.output.dist}/assets`))
 });

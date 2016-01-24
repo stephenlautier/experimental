@@ -1,5 +1,9 @@
-<ul class="heroes">
-	<li *ngFor="#hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
-		<span class="badge">{{hero.id}}</span> {{hero.name}}
-	</li>
-</ul>
+<div class="page-header">
+	<h1>{{title}}</h1>
+</div>
+
+<div class="heroes" *ngFor="#hero of heroes">
+	<div class="hero">
+		<h2><a [routerLink]="['HeroDetail', {hero: hero.key}]">{{ hero.title }}</a></h2> [{{ hero.role }}] {{ hero.caption}}
+	</div>
+</div>

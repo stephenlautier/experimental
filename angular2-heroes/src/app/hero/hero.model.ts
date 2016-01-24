@@ -1,4 +1,7 @@
 export interface Hero {
-	id: number;
-	name: string;
+	key: string;
+	title: string;
+	caption: string;
+	description: string;
+	role: string;
 }

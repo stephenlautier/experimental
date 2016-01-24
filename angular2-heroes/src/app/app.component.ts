@@ -1,36 +1,38 @@
 import "bootstrap/css/bootstrap.css!";
+import "assets/styles/app.css!";
+
 import {Component, OnInit} from "angular2/core";
+import {RouteConfig, ROUTER_DIRECTIVES} from "angular2/router";
 import config from "./app.config";
-import {Hero, HeroDetailComponent, HeroListComponent, HeroService} from "./hero/hero";
+import {HeroDetailComponent, HeroListComponent, HeroService} from "./hero/hero";
+import {HomeComponent} from "./home/home";
+import {UserInfoService} from "./user/user";
 
 @Component({
 	selector: "app-heroes",
 	templateUrl: `${config.basePath}/app.html`,
-	directives: [HeroDetailComponent, HeroListComponent],
-	providers: [HeroService],
+	directives: [HeroDetailComponent, HeroListComponent, HomeComponent, ROUTER_DIRECTIVES],
+	providers: [HeroService, UserInfoService],
 })
+@RouteConfig([
+	{ path: "/", name: "Home", component: HomeComponent, useAsDefault: true },
+	{ path: "/heroes", name: "Heroes", component: HeroListComponent },
+	{ path: "/heroes/:hero", name: "HeroDetail", component: HeroDetailComponent },
+])
 export class AppComponent implements OnInit {
 
-	title = "Tour of Heroes";
-	selectedHero: Hero;
-	heroes: Hero[];
+	title = config.name;
+	appVersion = config.version;
+	unreadNotificationsCount = 3;
+	user: string;
 
 	constructor(
-		private _heroService: HeroService
+		private _userInfoService: UserInfoService
 	) {
 
 	}
 
 	ngOnInit() {
-		this.getHeroes();
-	}
-
-	getHeroes() {
-		this._heroService.getHeroes()
-			.then((x: Hero[]) => this.heroes = x);
-	}
-
-	onSelect(hero: Hero): void {
-		this.selectedHero = hero;
+		this.user = this._userInfoService.alias;
 	}
 }
