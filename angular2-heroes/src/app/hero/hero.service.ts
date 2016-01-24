@@ -12,7 +12,6 @@ export class HeroService {
 
 	getByKey(key: string): Promise<Hero> {
 		return this.getAll().then((x: Hero[]) => {
-
 			return _.find(x, { key: key });
 		});
 	}
