@@ -1,4 +1,5 @@
 import {Injectable} from "angular2/core";
+import * as _ from "lodash";
 import {Hero} from "./hero.model";
 import {Heroes} from "./mock-heroes";
 
@@ -10,9 +11,9 @@ export class HeroService {
 	}
 
 	getByKey(key: string): Promise<Hero> {
-		return this.getAll().then(x => {
-			//TODO: implement
-			return x[0];
+		return this.getAll().then((x: Hero[]) => {
+
+			return _.find(x, { key: key });
 		});
 	}
 }
