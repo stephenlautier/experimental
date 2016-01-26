@@ -14,6 +14,13 @@ gulp.task("build", (cb) => {
 		cb);
 });
 
+gulp.task("rebuild", (cb) => {
+	return runSeq(
+		"clean",
+		"build",
+		cb);
+});
+
 // scripts
 gulp.task("compile:ts", () => {
 	var tsProject = getTscProject();
