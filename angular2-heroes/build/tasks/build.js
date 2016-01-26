@@ -10,7 +10,7 @@ var paths = require("../paths");
 
 gulp.task("build", (cb) => {
 	return runSeq(
-		["compile:ts", "html", "copy:imgs"],
+		["compile:ts", "compile:sass", "html", "copy:imgs"],
 		cb);
 });
 
