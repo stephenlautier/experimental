@@ -32,7 +32,7 @@
     },
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.7",
-      "angular-translate": "github:angular-translate/bower-angular-translate@^2.8.1",
+      "angular-translate": "github:angular-translate/bower-angular-translate@^2.9.0",
       "jquery": "github:components/jquery@^2.1.4",
       "lodash": "^3.10.1",
       "ssv-angular-core": "github:stephenlautier/ssv-angular-core@^0.1.1",

@@ -19,9 +19,9 @@ System.config({
   },
 
   map: {
-    "angular": "github:angular/bower-angular@1.4.7",
+    "angular": "github:angular/bower-angular@1.4.9",
     "angular-tooltipster": "lib/index",
-    "angular-translate": "github:angular-translate/bower-angular-translate@2.8.1",
+    "angular-translate": "github:angular-translate/bower-angular-translate@2.9.0",
     "browser-sync": "npm:browser-sync@2.9.11",
     "del": "npm:del@2.0.2",
     "dts-generator": "npm:dts-generator@1.5.0",
@@ -38,8 +38,8 @@ System.config({
     "tooltipster": "github:stephenlautier/tooltipster@3.5.2",
     "typescript": "npm:typescript@1.6.2",
     "typescript-require": "npm:typescript-require@0.2.9",
-    "github:angular-translate/bower-angular-translate@2.8.1": {
-      "angular": "github:angular/bower-angular@1.4.7"
+    "github:angular-translate/bower-angular-translate@2.9.0": {
+      "angular": "github:angular/bower-angular@1.4.9"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -114,7 +114,7 @@ System.config({
       "browserify-zlib": "npm:browserify-zlib@0.1.4"
     },
     "github:stephenlautier/ssv-angular-core@0.1.1": {
-      "angular": "github:angular/bower-angular@1.4.7",
+      "angular": "github:angular/bower-angular@1.4.9",
       "jquery": "github:components/jquery@2.1.4"
     },
     "npm:abbrev@1.0.7": {

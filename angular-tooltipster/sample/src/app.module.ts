@@ -20,11 +20,29 @@ app.directive("ssvTooltipSample", tooltipSampleDirective);
 
 app.config((tooltipProvider: TooltipProvider) => {
 
-		tooltipProvider.setDefaults({
-			//theme: "flat-ui",
-			useTranslate: true
-		});
-
+	tooltipProvider.setDefaults({
+		//theme: "flat-ui",
+		useTranslate: true
 	});
+
+
+});
+	
+/*@ngInject*/
+app.config(
+	($translateProvider: angular.translate.ITranslateProvider) => {
+		$translateProvider.translations("en", {
+			"hello": "Hey guys"
+		});
+	}
+);
+	
+/*@ngInject*/
+app.run(
+	($translate: angular.translate.ITranslateService) => {
+
+		console.log(`TRANSLATE >> ${$translate.instant("hello")}`);
+	}
+)
 
 export default app;
