@@ -1,0 +1,42 @@
+{
+  "name": "typescript-lab",
+  "version": "0.0.1",
+  "description": "",
+  "authors": [
+    "Stephen Lautier"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "tools",
+    "build",
+    "_artifact",
+    "tslint.json",
+    "tsconfig.json",
+    "tsd.json",
+    "jsconfig.json",
+    "karma.json",
+    "karma.conf.js",
+    "gulpfile.js",
+    "system.config.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": ">=1.4.7"
+  },
+  "devDependencies": {
+    "jasmine-core": "jasmine#~2.3.4",
+    "jasmine-es6-promise-matchers": "~2.0.1",
+    "angular-mocks": "~1.4.7"
+  },
+  "typescript": {
+    "definition": "dist/typescript-lab.d.ts"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "analytics": true,
+  "directory": "bower_components",
+  "registry": {
+	  "search": [
+		"https://bower.herokuapp.com"
+	  ]
+	},
+  "shorthand-resolver": "git://stash.betsson.local/scm/{{owner}}/{{package}}.git",
+  "color": true,
+  "timeout": 60000,
+  "interactive": true,
+  "strict-ssl": false
+}
