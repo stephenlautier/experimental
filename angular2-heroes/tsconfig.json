@@ -3,15 +3,18 @@
 		"module": "amd",
 		"moduleResolution": "node",
 		"target": "es5",
-		"noImplicitAny": true,
-		"noEmit": true,
-		"noLib": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"declaration": false
+		"declaration": false,
+		"noImplicitReturns": true,
+		"noImplicitAny": true,
+		"noFallthroughCasesInSwitch": true
 	},
 	"exclude": [
 		"node_modules",
-		"wwwroot"
+		"wwwroot",
+		"dist",
+		"typings/main.d.ts",
+		"typings/main"
 	]
 }

@@ -2,9 +2,9 @@
 import {Component, OnInit} from "angular2/core";
 import {RouteConfig, ROUTER_DIRECTIVES} from "angular2/router";
 import config from "./app.config";
-import {HeroDetailComponent, HeroListComponent, HeroService} from "./hero/hero";
-import {HomeComponent} from "./home/home";
-import {UserInfoService} from "./user/user";
+import {HeroDetailComponent, HeroListComponent, HeroService} from "./areas/hero/hero";
+import {HomeComponent} from "./areas/home/home";
+import {UserInfoService} from "./areas/user/user";
 
 @Component({
 	selector: "app-heroes",

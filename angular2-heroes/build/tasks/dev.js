@@ -3,7 +3,7 @@ var util = require("gulp-util");
 var browserSync = require("browser-sync");
 var historyApiFallback = require('connect-history-api-fallback');
 
-var paths = require("../paths")
+var paths = require("../paths");
 
 gulp.task("watch", ["serve"], () => {
 

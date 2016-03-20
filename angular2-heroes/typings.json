@@ -1,0 +1,8 @@
+{
+  "name": "angular2-tabs-tut",
+  "version": false,
+  "ambientDependencies": {
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654",
+    "lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#7fffbd3e040a93c244777e3be04cd6223ac69301"
+  }
+}
