@@ -6,7 +6,7 @@ import {HeroService} from "./hero.service";
 
 @Component({
 	selector: "my-hero-list",
-	templateUrl: `${config.basePath}/areas//hero/hero-list.html`,
+	templateUrl: `${config.basePath}/areas/hero/hero-list.html`,
 	directives: [ROUTER_DIRECTIVES]
 })
 export class HeroListComponent implements OnInit {
