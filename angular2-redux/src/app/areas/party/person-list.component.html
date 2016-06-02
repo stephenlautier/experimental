@@ -1,24 +1,24 @@
 
 	<ul class="list-group">
 		<li
-			*ngFor="let person of people"
+			*ngFor="let person of people.filter(filter)"
 			[class.list-group-item-success]="person.attending"
 			class="list-group-item"
 		>
 			<strong>{{person.name}}</strong> - Guests: {{person.guests}}
 			<button (click)="addGuest.emit(person.id)" class="btn btn-default">
 				<i class="fa fa-plus" title="Add Guest" aria-hidden="true"></i>
-  				<span class="sr-only">Add Guest</span>
+				<span class="sr-only">Add Guest</span>
 			</button>
 			<button *ngIf="person.guests" (click)="removeGuest.emit(person.id)" class="btn btn-default">
 				<i class="fa fa-minus" title="Remove Guest" aria-hidden="true"></i>
-  				<span class="sr-only">Remove Guest</span>
+				<span class="sr-only">Remove Guest</span>
 			</button>
 			Attending?
 			<input type="checkbox" [(ngModel)]="person.attending" (change)="toggleAttending.emit(person.id)" />
 			<button (click)="removePerson.emit(person.id)" class="btn btn-danger">
 				<i class="fa fa-trash-o" title="Delete" aria-hidden="true"></i>
-  				<span class="sr-only">Delete</span>
+				<span class="sr-only">Delete</span>
 			</button>
 		</li>
 	</ul>

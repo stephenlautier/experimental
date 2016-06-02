@@ -13,6 +13,8 @@ export class PersonList {
 		emit relevant events back up for parent, or "container" components to handle
 	*/
 	@Input() people: PersonState[];
+	// for now, we will pass filter down and apply
+	@Input() filter: any;
 	@Output() addGuest = new EventEmitter();
 	@Output() removeGuest = new EventEmitter();
 	@Output() removePerson = new EventEmitter();

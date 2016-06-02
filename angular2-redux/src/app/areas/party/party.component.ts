@@ -4,6 +4,7 @@ import {Store} from "@ngrx/store";
 import {LoggerFactory, ILog} from "ssv-ng2-core";
 
 import {AppState} from "../../app.state";
+import {PartyFilterSelectComponent} from "./party-filter/party-filter";
 import {personActions} from "./people.reducer";
 import {PersonState} from "./people.state";
 import {PersonList} from "./person-list.component";
@@ -15,18 +16,19 @@ import {PersonInput} from "./person-input.component";
 	templateUrl: "party.component.html",
 	directives: [
 		PersonInput,
-		PersonList
+		PersonList,
+		PartyFilterSelectComponent
 	]
 })
 export class PartyContainerComponent {
 
 	title = "Party";
-	start = Math.floor(Math.random() * (5000));
+	people$: Observable<PersonState[]>;
+	filter$: Observable<any>;
 
 	private id = "partyContainerComponent";
 	private logger: ILog;
-	private people$: Observable<PersonState[]>;
-
+	private start = Math.floor(Math.random() * (5000));
 
 	constructor(
 		loggerFactory: LoggerFactory,
@@ -36,6 +38,7 @@ export class PartyContainerComponent {
 		this.logger.debug("ctor");
 
 		this.people$ = this.store.select<PersonState[]>("people");
+		this.filter$ = this.store.select<any>("partyFilter");
 	}
 
 	addPerson(name: string): void {
