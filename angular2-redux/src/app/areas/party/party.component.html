@@ -1,9 +1,19 @@
-<h3>{{title}}</h3>
+<div class="page-header">
+	<h1>{{title}}</h1>
+</div>
 <person-input (addPerson)="addPerson($event)">
 </person-input>
-<person-list [people]="people$ | async" 
-	(addGuest)="addGuest($event)"
-	(removeGuest)="removeGuest($event)"
-	(removePerson)="removePerson($event)"
-	(toggleAttending)="toggleAttending($event)">
-</person-list>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Persons
+	</div>
+	<div class="panel-body">
+		<person-list [people]="people$ | async" 
+			(addGuest)="addGuest($event)"
+			(removeGuest)="removeGuest($event)"
+			(removePerson)="removePerson($event)"
+			(toggleAttending)="toggleAttending($event)">
+		</person-list>
+	</div>
+</div>
