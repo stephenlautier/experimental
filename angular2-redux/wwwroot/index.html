@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>App Heroes - Angular 2</title>
+	<base href="/">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="./node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+	<!--<link href="./dist/assets/app-light.theme.css" type="text/css" rel="stylesheet">-->
+	<link href="./dist/assets/app-dark.theme.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+	<app-heroes>
+		<div class="splash-overlay">
+			<div class="loader">
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+			</div>
+		</div>
+	</app-heroes>
+
+	<!-- build:js assets/bundle.js -->
+	<!--<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"></script>-->
+
+	<!-- 1. Load libraries -->
+	<!-- Polyfill(s) for older browsers -->
+	<script src="./node_modules/es6-shim/es6-shim.min.js"></script>
+
+	<script src="./node_modules/zone.js/dist/zone.js"></script>
+	<script src="./node_modules/reflect-metadata/Reflect.js"></script>
+	<script src="./node_modules/systemjs/dist/system.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:remove -->
+	<script src="./system.config.js"></script>
+	<!-- endbuild -->
+
+	<script>
+		System.import("main.js")
+			.catch(function(err) { console.error(err); });
+	</script>
+
+</body>
+
+</html>
