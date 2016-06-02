@@ -17,6 +17,7 @@
         "test": "test",
         "rxjs": "n:rxjs",
         "@angular": "n:@angular",
+        "@ngrx": "n:@ngrx",
         "angular2-in-memory-web-api": "n:angular2-in-memory-web-api",
         "ssv-ng2-core": "n:ssv-ng2-core",
         "lodash": "n:lodash"
@@ -52,6 +53,8 @@
         "@angular/router",
         "@angular/router-deprecated",
         "@angular/testing",
+        "@ngrx/core",
+        "@ngrx/store",
         "lodash"
     ];
 

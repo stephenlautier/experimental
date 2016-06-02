@@ -7,36 +7,31 @@ import {InMemoryBackendService, SEED_DATA, InMemoryBackendConfig} from "angular2
 import {LOGGER_PROVIDERS} from "ssv-ng2-core";
 
 import consts from "./app.const";
-import {HeroDetailComponent, HeroListComponent, HeroService, HeroClient} from "./areas/hero/hero";
+import {PartyContainerComponent} from "./areas/party/party";
 import {HomeComponent} from "./areas/home/home";
 import {UserInfoService} from "./areas/user/user";
-import {MockAppData} from "./app.mock-data";
+// import {MockAppData} from "./app.mock-data";
 
 @Component({
 	selector: "app-heroes",
 	templateUrl: `${consts.basePath}/app.html`,
 	directives: [
-		HeroDetailComponent,
-		HeroListComponent,
 		HomeComponent,
 		ROUTER_DIRECTIVES
 	],
 	providers: [
-		HeroService,
 		UserInfoService,
-		HeroClient,
 		HTTP_PROVIDERS,
 		// in memory web api providers
 		provide(XHRBackend, { useClass: InMemoryBackendService }),
-		provide(SEED_DATA, { useClass: MockAppData }),
+		// provide(SEED_DATA, { useClass: MockAppData }),
 		provide(InMemoryBackendConfig, { useValue: { delay: 120 } }),
 		LOGGER_PROVIDERS
 	],
 })
 @Routes([
 	{ path: "/", component: HomeComponent }, // useAsDefault: true
-	{ path: "/heroes", component: HeroListComponent },
-	{ path: "/hero/:hero", component: HeroDetailComponent },
+	{ path: "/party", component: PartyContainerComponent },
 ])
 export class AppComponent implements OnInit {
 

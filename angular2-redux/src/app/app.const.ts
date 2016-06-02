@@ -1,5 +1,5 @@
 export class AppConst {
-	name = "Heroes of the Storm";
+	name = "ng2Redux";
 	version = "1.0.0-alpha";
 	basePath = "dist/app";
 }

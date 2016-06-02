@@ -1,0 +1,9 @@
+<h3>{{title}}</h3>
+<person-input (addPerson)="addPerson($event)">
+</person-input>
+<person-list [people]="people$ | async" 
+	(addGuest)="addGuest($event)"
+	(removeGuest)="removeGuest($event)"
+	(removePerson)="removePerson($event)"
+	(toggleAttending)="toggleAttending($event)">
+</person-list>
