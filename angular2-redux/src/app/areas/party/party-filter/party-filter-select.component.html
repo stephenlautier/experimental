@@ -1,5 +1,5 @@
 <div class="margin-bottom-10">
-	<select #selectList (change)="updateFilter.emit(selectList.value)">
+	<select #selectList (change)="updateFilter.emit(selectList.value)" class="form-control">
 		<option *ngFor="let filter of filters" value="{{filter.action}}">
 			 {{filter.friendly}}
 		</option>

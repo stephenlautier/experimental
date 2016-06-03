@@ -1,5 +1,5 @@
 import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy} from "@angular/core";
-import {PersonState} from "./people.state";
+import {PersonState} from "./person.state";
 
 @Component({
 	moduleId: module.id,

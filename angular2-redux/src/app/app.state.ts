@@ -1,6 +1,6 @@
-import {PersonState} from "./areas/party/party";
+import {PersonState, PartyFilterState} from "./areas/party/party";
 
 export interface AppState {
 	people: PersonState[];
-	partyFilter: any;
+	partyFilter: PartyFilterState;
 }

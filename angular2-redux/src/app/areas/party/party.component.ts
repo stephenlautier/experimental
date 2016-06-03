@@ -4,9 +4,9 @@ import {Store} from "@ngrx/store";
 import {LoggerFactory, ILog} from "ssv-ng2-core";
 
 import {AppState} from "../../app.state";
-import {PartyFilterSelectComponent} from "./party-filter/party-filter";
+import {PartyFilterSelectComponent, PartyFilterState} from "./party-filter/party-filter";
 import {personActions} from "./people.reducer";
-import {PersonState} from "./people.state";
+import {PersonState} from "./person.state";
 import {PersonList} from "./person-list.component";
 import {PersonInput} from "./person-input.component";
 
@@ -24,7 +24,7 @@ export class PartyContainerComponent {
 
 	title = "Party";
 	people$: Observable<PersonState[]>;
-	filter$: Observable<any>;
+	filter$: Observable<PartyFilterState>;
 
 	private id = "partyContainerComponent";
 	private logger: ILog;
@@ -38,7 +38,7 @@ export class PartyContainerComponent {
 		this.logger.debug("ctor");
 
 		this.people$ = this.store.select<PersonState[]>("people");
-		this.filter$ = this.store.select<any>("partyFilter");
+		this.filter$ = this.store.select<PartyFilterState>("partyFilter");
 	}
 
 	addPerson(name: string): void {
@@ -65,6 +65,10 @@ export class PartyContainerComponent {
 
 	toggleAttending(id: number) {
 		this.store.dispatch({ type: personActions.toggleAttending, payload: id });
+	}
+
+	updateFilter(filter: string) {
+		this.store.dispatch({ type: filter });
 	}
 
 	getNextId(): number {

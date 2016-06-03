@@ -1,6 +1,5 @@
 import {ActionReducer} from "@ngrx/store";
-import {PersonState} from "./people.state";
-
+import {PersonState} from "./person.state";
 
 export const personActions = {
 	addGuest: "add-guest",
