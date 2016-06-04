@@ -12,8 +12,14 @@
 			Persons
 		</div>
 		<div class="panel-body">
-			<person-list [people]="people$ | async" [filter]="filter$ | async" (addGuest)="addGuest($event)" (removeGuest)="removeGuest($event)"
-				(removePerson)="removePerson($event)" (toggleAttending)="toggleAttending($event)">
+			<person-list 
+			[people]="people$ | async"
+			[filter]="filter$ | async"
+			(addGuest)="addGuest($event)"
+			(removeGuest)="removeGuest($event)"
+			(removePerson)="removePerson($event)"
+			(toggleAttending)="toggleAttending($event)"
+			>
 			</person-list>
 		</div>
 	</div>

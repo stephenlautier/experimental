@@ -12,13 +12,10 @@ export const personActions = {
 @Injectable()
 export class PersonActions {
 
-	addPerson(id: number, name: string): Action {
+	addPerson(payload: { id: number, name: string }): Action {
 		return {
 			type: personActions.addPerson,
-			payload: {
-				id: id,
-				name: name
-			}
+			payload: payload
 		};
 	}
 

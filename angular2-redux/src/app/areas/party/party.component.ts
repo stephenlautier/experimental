@@ -39,12 +39,15 @@ export class PartyContainerComponent {
 		this.logger = loggerFactory.getInstance(this.id);
 		this.logger.debug("ctor");
 
-		this.people$ = this.store.select<PersonState[]>("people");
-		this.filter$ = this.store.select<PartyFilterState>("partyFilter");
+		this.people$ = this.store.select<PersonState[]>(x => x.people);
+		this.filter$ = this.store.select<PartyFilterState>(x => x.partyFilter);
 	}
 
 	addPerson(name: string): void {
-		this.store.dispatch(this.personActions.addPerson(this.getNextId(), name));
+		this.store.dispatch(this.personActions.addPerson({
+			id: this.getNextId(),
+			name
+		}));
 	}
 
 	addGuest(id: number) {
