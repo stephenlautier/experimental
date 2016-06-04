@@ -2,12 +2,7 @@ import {ActionReducer} from "@ngrx/store";
 
 import {PersonState} from "../person.state";
 import {PartyFilterState} from "./party-filter.state";
-
-export const partyFilterActions = {
-	showAttending: "show-attending",
-	showAll: "show-all",
-	showGuests: "show-guests"
-};
+import {partyFilterActions} from "./party-filter.actions";
 
 export const partyFilterReducer: ActionReducer<PartyFilterState> =
 	(state = (person: PersonState) => true, action) => {
@@ -22,4 +17,3 @@ export const partyFilterReducer: ActionReducer<PartyFilterState> =
 				return state;
 		}
 	};
-

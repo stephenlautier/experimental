@@ -7,7 +7,7 @@ import {InMemoryBackendService, SEED_DATA, InMemoryBackendConfig} from "angular2
 import {LOGGER_PROVIDERS} from "ssv-ng2-core";
 
 import consts from "./app.const";
-import {PartyContainerComponent} from "./areas/party/party";
+import {PartyContainerComponent, PersonActions, PartyFilterActions} from "./areas/party/party";
 import {HomeComponent} from "./areas/home/home";
 import {UserInfoService} from "./areas/user/user";
 // import {MockAppData} from "./app.mock-data";
@@ -22,6 +22,8 @@ import {UserInfoService} from "./areas/user/user";
 	providers: [
 		UserInfoService,
 		HTTP_PROVIDERS,
+		PersonActions,
+		PartyFilterActions,
 		// in memory web api providers
 		provide(XHRBackend, { useClass: InMemoryBackendService }),
 		// provide(SEED_DATA, { useClass: MockAppData }),

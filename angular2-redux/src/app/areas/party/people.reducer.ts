@@ -1,13 +1,6 @@
 import {ActionReducer} from "@ngrx/store";
 import {PersonState} from "./person.state";
-
-export const personActions = {
-	addGuest: "add-guest",
-	removeGuest: "remove-guest",
-	toggleAttending: "toggle-attending",
-	addPerson: "add-person",
-	removePerson: "remove-person"
-};
+import {personActions} from "./person.actions";
 
 const details: ActionReducer<PersonState> = (state, action) => {
 	switch (action.type) {

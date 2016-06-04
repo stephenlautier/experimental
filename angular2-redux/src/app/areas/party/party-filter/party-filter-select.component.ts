@@ -1,5 +1,5 @@
 import {Component, Output, EventEmitter, ChangeDetectionStrategy} from "@angular/core";
-import {partyFilterActions} from "./party-filter.reducer";
+import {partyFilterActions} from "./party-filter.actions";
 
 @Component({
 	moduleId: module.id,

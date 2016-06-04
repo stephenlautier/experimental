@@ -4,8 +4,8 @@ import {Store} from "@ngrx/store";
 import {LoggerFactory, ILog} from "ssv-ng2-core";
 
 import {AppState} from "../../app.state";
-import {PartyFilterSelectComponent, PartyFilterState} from "./party-filter/party-filter";
-import {personActions} from "./people.reducer";
+import {PartyFilterSelectComponent, PartyFilterState, PartyFilterActions} from "./party-filter/party-filter";
+import {PersonActions} from "./person.actions";
 import {PersonState} from "./person.state";
 import {PersonList} from "./person-list.component";
 import {PersonInput} from "./person-input.component";
@@ -32,6 +32,8 @@ export class PartyContainerComponent {
 
 	constructor(
 		loggerFactory: LoggerFactory,
+		private partyFilterActions: PartyFilterActions,
+		private personActions: PersonActions,
 		private store: Store<AppState>
 	) {
 		this.logger = loggerFactory.getInstance(this.id);
@@ -42,33 +44,28 @@ export class PartyContainerComponent {
 	}
 
 	addPerson(name: string): void {
-		this.store.dispatch({
-			type: personActions.addPerson,
-			payload: {
-				id: this.getNextId(),
-				name: name
-			}
-		});
+		this.store.dispatch(this.personActions.addPerson(this.getNextId(), name));
 	}
 
 	addGuest(id: number) {
-		this.store.dispatch({ type: personActions.addGuest, payload: id });
+		this.store.dispatch(this.personActions.addGuest(id));
+
 	}
 
 	removeGuest(id: number) {
-		this.store.dispatch({ type: personActions.removeGuest, payload: id });
+		this.store.dispatch(this.personActions.removeGuest(id));
 	}
 
 	removePerson(id: number) {
-		this.store.dispatch({ type: personActions.removePerson, payload: id });
+		this.store.dispatch(this.personActions.removePerson(id));
 	}
 
 	toggleAttending(id: number) {
-		this.store.dispatch({ type: personActions.toggleAttending, payload: id });
+		this.store.dispatch(this.personActions.toggleAttending(id));
 	}
 
 	updateFilter(filter: string) {
-		this.store.dispatch({ type: filter });
+		this.store.dispatch(this.partyFilterActions.updateFilter(filter));
 	}
 
 	getNextId(): number {
