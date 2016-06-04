@@ -18,6 +18,7 @@
 		"rxjs": "n:rxjs",
 		"@angular": "n:@angular",
 		"@ngrx": "n:@ngrx",
+		"ngrx-store-logger": "n:ngrx-store-logger",
 		"angular2-in-memory-web-api": "n:angular2-in-memory-web-api",
 		"ssv-core": "n:ssv-core",
 		"ssv-ng2-core": "n:ssv-ng2-core",
@@ -36,6 +37,10 @@
 			defaultExtension: "js"
 		},
 		"angular2-in-memory-web-api": {
+			defaultExtension: "js"
+		},
+		"ngrx-store-logger": {
+			main: "dist/index.js",
 			defaultExtension: "js"
 		},
 		"ssv-core": {
