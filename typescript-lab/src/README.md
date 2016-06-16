@@ -17,6 +17,7 @@
 	- Models
 - Template Strings
 - For..of
+- Spread
 - ES6 Modules
 	- Import, export and defaults (default as)
 - Properties - get/set
@@ -47,7 +48,7 @@ export function isAuthError(error: any): error is IAuthError {
 - String Literals types
 
 # Resources
-- Typescript handbook - http://www.typescriptlang.org/Handbook
+- Typescript handbook - http://www.typescriptlang.org/docs/handbook/basic-types.html
 - Whats New - https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript
 - Roadmap (for nerds like me) - https://github.com/Microsoft/TypeScript/wiki/Roadmap
 
