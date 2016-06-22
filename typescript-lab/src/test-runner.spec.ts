@@ -1,7 +1,6 @@
-
 describe("TestRunner", () => {
 
-	it("animal should eat", () => {
-		console.log("hello!");
+	it("finished successfully", () => {
+		console.log("hello tslabs!");
 	});
 });

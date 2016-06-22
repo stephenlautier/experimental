@@ -1,4 +1,4 @@
-//type alphaNumeric = string | number;
+// type alphaNumeric = string | number;
 export class Animal implements IAnimal {
 
 	constructor(
@@ -44,4 +44,4 @@ export function isCat(animal: IAnimal): animal is Cat {
 	} else {
 		return false;
 	}
-} 
+}

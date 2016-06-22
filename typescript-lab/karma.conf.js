@@ -30,7 +30,9 @@ module.exports = function (config) {
 		},
 		files: [
 			conf.src.testTs,
-			"src/*.spec.ts"
+			"src/*.spec.ts",
+
+			// { pattern: "node_modules/lodash/**/*.js", included: false, watched: false, served: true },
 		],
 		exclude: [],
 		preprocessors: {},

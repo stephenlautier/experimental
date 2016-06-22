@@ -6,22 +6,27 @@
 	- Transpiles (Compiles) down to JS
 	- Allows us to use JS features of tomorrow
 	- If you're familiar with C# or Java you will love it :)
-- Typings - boolean, number, void, array, any
-	- Optional properties
-- Access Modifiers - private, public 
+- Class
+	- Creating new object
+- Template Strings
 - Methods
 	- Optional parameters
+- Typings - boolean, number, void, array, any
+	- Optional properties
+- Class CTOR params
+	- CTOR with accessor modifier
+- Enums
+	- Normal Enum
+	- Const Enum
+- Interfaces
+- Access Modifiers - private, public
 - Lambda
-- Class, interface, enums
-	- Creating new object
-	- Models
-- Template Strings
 - For..of
 - Spread
 - ES6 Modules
 	- Import, export and defaults (default as)
 - Properties - get/set
-- TypeDoc
+- Installing 3rd Party lib - lodash
 
 ## Typings
 NPM module used to download typescript definitions for libraries.
@@ -30,10 +35,10 @@ NPM module used to download typescript definitions for libraries.
 	- Commit typings to source control
 	- Custom e.g. _cachefactory
 
-
 # Advanced/Extra
-- Generics
 - Union Types
+- String Literals types e.g. `easing: "ease-in" | "ease-out"`
+- Generics
 - Type guards
 ```
 export function isAuthError(error: any): error is IAuthError {
@@ -44,7 +49,6 @@ export function isAuthError(error: any): error is IAuthError {
 	}
 ```
 - Explain `this`
-- String Literals types
 
 # Resources
 - Typescript handbook - http://www.typescriptlang.org/docs/handbook/basic-types.html
