@@ -23,12 +23,11 @@
 - Properties - get/set
 - TypeDoc
 
-## Definitly Typed
+## Typings
 NPM module used to download typescript definitions for libraries.
-	- Install a package `tsd install jquery --save`
-	- Update all  `tsd update -so`
+	- Install a package `typings install lodash --save` or `typings install dt~cachefactory --save`
 	- Update frequently
-	- Commit TSD to source control
+	- Commit typings to source control
 	- Custom e.g. _cachefactory
 
 

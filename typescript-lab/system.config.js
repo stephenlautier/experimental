@@ -1,23 +1,15 @@
 System.config({
-	baseURL: "/",
 	defaultJSExtensions: true,
-    transpiler: "none",
-
+	transpiler: false,
 	paths: {
-		//"*": "dist/*",
 		"github:*": "jspm_packages/github/*",
-		"npm:*": "jspm_packages/npm/*",
-		"bower/*": "bower_components/*"
-	},
-
-	meta: {
-		"angular": {
-			format: "global"
-		}
+		"npm:*": "jspm_packages/npm/*"
 	},
 
 	map: {
-		"typescript-lab": "_artifact/amd/index",
-		"angular": "bower/angular/angular"
+		"lodash": "node_modules/lodash",
+	},
+	packages: {
+		"lodash": { main: "index.js", defaultExtension: "js" }
 	}
 });

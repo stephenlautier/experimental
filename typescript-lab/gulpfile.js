@@ -1,1 +1,1 @@
-require("./gulp/main")
+require("./build/main");

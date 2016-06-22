@@ -2,16 +2,17 @@
 	"compilerOptions": {
 		"module": "amd",
 		"target": "es5",
-		"noImplicitAny": true,
-		"noEmit": false,
-		"noLib": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"declaration": false
+		"declaration": true,
+		"noImplicitReturns": true,
+		"noImplicitAny": true,
+		"noFallthroughCasesInSwitch": true,
+		"noEmitOnError": true
 	},
 	"exclude": [
 		"node_modules",
-		"dist",
-		"_artifact"
+		"wwwroot",
+		"dist"
 	]
 }

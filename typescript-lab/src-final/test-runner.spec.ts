@@ -1,4 +1,3 @@
-import "test-setup";
 import {Animal, Cat, isCat, IAnimal} from "./animal";
 
 beforeEach(JasminePromiseMatchers.install);
@@ -22,9 +21,9 @@ describe("TestRunner", () => {
 
 		for (let item of animals) {
 			item.eat("something");
-			// 			
+			//
 			// 			let i: IAnimal = item;
-			// 
+			//
 			// 			if (isCat(i)) {
 			// 				i.purr();
 			// 			} else {
