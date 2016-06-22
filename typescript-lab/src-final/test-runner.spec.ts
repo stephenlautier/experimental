@@ -16,10 +16,16 @@ describe("TestRunner", () => {
 		let cow = new Animal("cow");
 		let cat = new Animal("cat");
 
-		let animals: Animal[] = [dog, cow, cat];
+		let animals: IAnimal[] = [dog, cow, cat];
 
 
 		for (let item of animals) {
+
+			// if (isCat(item)) {
+			// 	item.sleep();
+			// } else {
+			// 	item.name;
+			// }
 			item.eat("something");
 			//
 			// 			let i: IAnimal = item;
