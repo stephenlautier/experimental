@@ -18,24 +18,21 @@ describe("TestRunner", () => {
 
 		let animals: IAnimal[] = [dog, cow, cat];
 
-
 		for (let item of animals) {
 
-			// if (isCat(item)) {
-			// 	item.sleep();
-			// } else {
-			// 	item.name;
-			// }
-			item.eat("something");
-			//
-			// 			let i: IAnimal = item;
-			//
-			// 			if (isCat(i)) {
-			// 				i.purr();
-			// 			} else {
-			// 				i.
-			// 			}
-		}
+			if (isCat(item)) {
+				item.sleep();
+			} else {
+				item.name;
+			}
 
+			let i: IAnimal = item;
+
+			if (isCat(i)) {
+				i.purr();
+			} else {
+				// i.
+			}
+		}
 	});
 });

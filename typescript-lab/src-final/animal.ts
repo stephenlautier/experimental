@@ -1,4 +1,9 @@
-// type alphaNumeric = string | number;
+export type FoodTypeAllowed = "chicken" | "vegg";
+export const foodTypeAllowed = {
+	chicken: "chicken" as "chicken",
+	vegg: "vegg" as "vegg"
+};
+
 export class Animal implements IAnimal {
 
 	constructor(
@@ -12,7 +17,6 @@ export class Animal implements IAnimal {
 	}
 
 	sleep(amount: string | number): void {
-
 		let value: string;
 		if (typeof amount === "number") {
 			value = amount.toFixed(2);
@@ -33,7 +37,6 @@ export interface IAnimal {
 }
 
 export interface Cat extends IAnimal {
-	name: string;
 	sleep(): void;
 	purr(): void;
 }
