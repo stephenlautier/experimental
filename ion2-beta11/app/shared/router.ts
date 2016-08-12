@@ -1,4 +1,4 @@
-import {BehaviorSubject} from "rxjs/Rx";
+import {BehaviorSubject, Observable} from "rxjs/Rx";
 import { Injectable } from '@angular/core';
 
 export interface RouteModel {
@@ -18,10 +18,15 @@ export class RouterService {
   }
 
   initialize(): void {
-    window.onpopstate = () => {
-      console.log(`[routerService::onpopstate] init`, window.location);
+  Observable.fromEvent(window, "popstate")
+    .subscribe(x => {
+      console.log(`[routerService::onpopstate] init subscribe`, window.location);
       this.resolve();
-    };
+    });
+    // window.onpopstate = () => {
+    //   console.log(`[routerService::onpopstate] init`, window.location);
+    //   this.resolve();
+    // };
     this.resolve();
   }
 
