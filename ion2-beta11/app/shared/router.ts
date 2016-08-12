@@ -23,10 +23,6 @@ export class RouterService {
       console.log(`[routerService::onpopstate] init subscribe`, window.location);
       this.resolve();
     });
-    // window.onpopstate = () => {
-    //   console.log(`[routerService::onpopstate] init`, window.location);
-    //   this.resolve();
-    // };
     this.resolve();
   }
 
