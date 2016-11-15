@@ -1,0 +1,24 @@
+{
+  "name": "rollup-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "rollup": "node_modules/.bin/rollup -c rollup.config.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.0",
+    "@ssv/core": "./ssv-core-0.1.0.tgz"
+  },
+  "devDependencies": {
+    "@types/lodash": "*",
+    "rollup": "^0.36.3",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

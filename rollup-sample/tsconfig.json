@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"module": "es2015",
+		"target": "es5",
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"declaration": true,
+		"noImplicitReturns": true,
+		"noImplicitAny": true,
+		"noFallthroughCasesInSwitch": true,
+		"noEmitOnError": true,
+		"types": [
+			
+		],
+		"outDir": "dist"
+	},
+	"include": [
+		"src/**/*",
+		"test/**/*"
+	]
+}
