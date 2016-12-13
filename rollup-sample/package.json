@@ -4,15 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "rollup": "node_modules/.bin/rollup -c rollup.config.js"
+    "build": "tsc && npm run rollup",
+    "rollup": "node_modules/.bin/rollup -c rollup.config.js",
+    "start": "lite-server"
   },
   "dependencies": {
-    "lodash": "^4.17.0",
-    "@ssv/core": "./ssv-core-0.1.0.tgz"
+    "@ssv/core": "./ssv-core-0.1.0.tgz",
+    "lodash-es": "^4.17.2",
+    "moment": "^2.16.0"
   },
   "devDependencies": {
-    "@types/lodash": "*",
+    "@types/lodash-es": "^4.14.0",
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2",
     "rollup": "^0.36.3",
     "rollup-plugin-commonjs": "^5.0.5",
     "rollup-plugin-node-resolve": "^2.0.0",

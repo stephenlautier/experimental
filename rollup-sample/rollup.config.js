@@ -9,7 +9,10 @@ export default {
 	sourceMap: false,
 	format: "cjs",
 	plugins: [
-		nodeResolve({ jsnext: true, module: true }),
+		nodeResolve({
+			jsnext: true,
+			module: true
+		}),
 		commonjs({
 			include: "node_modules/rxjs/**",
 		}),
