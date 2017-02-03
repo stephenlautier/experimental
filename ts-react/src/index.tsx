@@ -1,9 +1,10 @@
+// tslint:disable-next-line:no-unused-variable
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { Hero } from "./components/hero";
+import { AppShell } from "./components/app-shell";
 
 ReactDOM.render(
-	<Hero name="Deadpool" ability="Regenerate" />,
+	<AppShell />,
 	document.getElementById("appRoot")
 );

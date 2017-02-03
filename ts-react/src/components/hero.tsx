@@ -10,6 +10,6 @@ export interface HeroProps {
 
 export class Hero extends React.Component<HeroProps, undefined> {
 	render() {
-		return <h1>Hello from {this.props.name} and {this.props.ability}!</h1>;
+		return <h1>{this.props.name} casts {this.props.ability}!</h1>;
 	}
 }
