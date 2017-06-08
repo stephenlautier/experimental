@@ -12,6 +12,13 @@
   "dependencies": {
     "@types/lodash": "^4.14.58",
     "lodash": "^4.17.4",
-    "rxjs": "^5.2.0"
+    "lokka": "^1.7.0",
+    "lokka-transport-http": "^1.6.1",
+    "rxjs": "^5.2.0",
+    "typescript": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/graphql": "^0.9.1",
+    "ts-graphql-plugin": "^1.0.2"
   }
 }
