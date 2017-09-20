@@ -3,13 +3,25 @@ import * as _ from "lodash";
 
 const fruits = ["apple", "strawberry", "banana"];
 const heroes = [{
-	name: "rexxar",
+	key: "rexxar",
+	name: "Rexxar",
+	role: "tank",
 }, {
-	name: "jaina"
+	key: "jaina",
+	name: "Jaina",
+	role: "assassin"
 }, {
-	name: "valeera"
+	key: "valeera",
+	name: "Valeera",
+	role: "assassin",
 }, {
-	name: "zul'jin"
+	key: "sylvanas",
+	name: "Sylvanas",
+	role: "specialist",
+}, {
+	key: "malthael",
+	name: "Malthael",
+	role: "assassin"
 }];
 const heroesMap = {
 	"rexxar": false,
@@ -26,3 +38,14 @@ const result = _.chain(heroes)
 	.value();
 
 result;
+
+const heroesByRole = _.groupBy(heroes, x => x.role)
+heroesByRole
+
+const heroesByRoleList = _.map(heroesByRole, (value, key) => {
+	return {
+		key,
+		heroes: value
+	}
+});
+heroesByRoleList
