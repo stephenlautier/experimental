@@ -49,3 +49,10 @@ const heroesByRoleList = _.map(heroesByRole, (value, key) => {
 	}
 });
 heroesByRoleList
+
+const titleTemplate = "You chose {{hero.name}}!";
+const compiledTemplate = _.template(titleTemplate, {
+	interpolate:  /{{([\s\S]+?)}}/g
+});
+const rexxarTitle = compiledTemplate({ hero: { name: "Rexxar"} })
+rexxarTitle;
