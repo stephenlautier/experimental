@@ -1,13 +1,35 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es2015",
     "target": "es5",
-    "plugins": [
-      {
-        "name": "ts-graphql-plugin",
-        "schema": "./graphql-schema.json",
-        "tag": "gql"
-      }
-    ]
-  }
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "strict": true,
+    // "noImplicitAny": true,
+    // "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmitOnError": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "stripInternal": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "pretty": true,
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017",
+      "dom"
+    ],
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*",
+    "test/**/*"
+  ]
 }

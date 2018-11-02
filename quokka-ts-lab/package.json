@@ -10,15 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/lodash": "^4.14.58",
-    "lodash": "^4.17.4",
+    "@types/lodash": "^4.14.117",
+    "lodash": "^4.17.11",
     "lokka": "^1.7.0",
     "lokka-transport-http": "^1.6.1",
-    "rxjs": "^5.2.0",
-    "typescript": "^2.3.4"
+    "rxjs": "^6.3.3",
+    "typescript": "^3.1.6"
   },
   "devDependencies": {
-    "@types/graphql": "^0.9.1",
-    "ts-graphql-plugin": "^1.0.2"
+    "@types/graphql": "^14.0.3",
+    "ts-graphql-plugin": "^1.1.2"
   }
 }
